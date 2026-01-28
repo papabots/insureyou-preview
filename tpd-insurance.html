@@ -178,6 +178,61 @@ nav a{
 }
 
 
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown button */
+.dropbtn {
+  text-decoration: none;
+  color: #000030;
+  font-weight: 500;
+  padding: 0;
+  margin-right: 25px;
+  cursor: pointer;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 200px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1000;
+  border-radius: 8px;
+  padding: 10px 0;
+}
+
+/* Individual links inside dropdown */
+.dropdown-content a {
+  color: #000030;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: block;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.dropdown-content a:hover {
+  background-color: #f2f2f2;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Optional: add little arrow */
+.dropbtn::after {
+  content: " ▼";
+  font-size: 0.7em;
+  margin-left: 5px;
+}
+
+
 
 /* CTA */
 .cta{
@@ -193,12 +248,111 @@ nav a{
 }
 
 /* FOOTER */
-footer{
-  background:#000030;
-  color:#aaa;
-  text-align:center;
-  padding:40px;
+footer {
+  background: #000030;
+  color: #aaa;
+  font-family: "Inter", sans-serif;
+  padding: 60px 20px 20px;
 }
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Top section */
+.footer-top {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.footer-top .footer-logo img {
+  height: 80px;
+  max-width: 200px;
+  margin-bottom: 15px;
+}
+
+.footer-description {
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Middle section: 3 columns centered */
+.footer-middle {
+  display: flex;
+  justify-content: center; /* centers all columns horizontally */
+  gap: 60px; /* space between columns */
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.footer-middle div {
+  flex: 0 1 200px; /* fixed min width but allows wrapping */
+  text-align: left; /* center content inside each column */
+}
+
+
+
+.footer-links h4,
+.footer-contact h4,
+.footer-social h4 {
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.footer-links a {
+  display: block;
+  color: #aaa;
+  text-decoration: none;
+  margin-bottom: 8px;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #02D9C5;
+}
+
+.footer-contact p {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.footer-social .social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.footer-social .social-icons img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Bottom section */
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #222;
+  padding-top: 20px;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-middle {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-middle div {
+    margin-bottom: 25px;
+  }
+}
+
 </style>
 </head>
 
@@ -207,147 +361,391 @@ footer{
 <header>
   <div class="logo">
     <a href="index.html">
-  <img src="images/insureyou-logo.png" alt="Insureyou Advisory Logo">
-</a>
+      <img src="images/insureyou-logo.png" alt="Insureyou Advisory Logo">
+    </a>
   </div>
 
   <nav>
-    <a href="index.html">Home</a>
-    <a href="insurances.html">Insurances</a>
     <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
+    <!-- Dropdown for Insurances -->
+    <div class="dropdown">
+      <a href="#" class="dropbtn">Insurances</a>
+      <div class="dropdown-content">
+        <a href="life-insurance.html">Life Insurance</a>
+        <a href="income-protection.html">Income Protection</a>
+        <a href="tpd-insurance.html">Total & Permanent Disability</a>
+        <a href="critical-illness.html">Trauma (Critical Illness)</a>
+      </div>
+    </div>
     <a href="partners.html">Partners</a>
+    <a href="contact.html">Contact</a>
     <a href="contact.html" class="btn-main">Get a Quote</a>
   </nav>
 </header>
 
 <section class="hero">
   <div class="hero-text">
-    <h1>Total & Permanent Disability (TPD) Insurance</h1>
-    <p>Financial support if you become totally and permanently disabled, helping you maintain security and independence.</p>
+    <h1>When the career is over</h1>
+    <p>TPD Insurance pays a large lump sum if you are permanently disabled and can never work again. It’s the money you need to adapt to a new life.</p><br>
+<a href="contact.html" class="btn-main">Get a Quote</a>
   </div>
   <div class="hero-image">Hero Image Placeholder</div>
 </section>
 
-<section class="section">
-  <h2>Benefits of TPD Insurance</h2>
-  <div class="benefits-grid">
-    <div class="benefit-card">
-      <h3>Financial Support</h3>
-      <p>Receive a lump sum to cover living expenses and major financial commitments.</p>
+<!-- TPD FIRST SECTION -->
+<section style="background:#ffffff; padding:80px 20px; width:100%;">
+  <div style="max-width:1000px; margin:0 auto; background:white; padding:50px; border-radius:14px; box-shadow:0 8px 20px rgba(0,0,0,0.08); text-align:left;">
+    
+    <h2 style="font-size:32px; color:#146DFF; text-align:center; margin-bottom:30px;">Life changes fast. Be prepared.</h2>
+    
+    <p style="font-size:18px; line-height:1.7; margin-bottom:25px; color:#333;">
+      We aren't talking about a broken leg or a few months off. TPD is for the serious stuff—spinal injuries, permanent illness, or loss of limbs—that stops you from ever doing your job again.
+    </p>
+    
+    <p style="font-size:18px; line-height:1.7; margin-bottom:25px; color:#333;">
+      If the paycheck stops forever, how do you pay the mortgage? How do you afford the wheelchair ramp or the medical specialist? TPD clears the debt so you can focus on your health, not your bank balance.
+    </p>
+    
+    <h3 style="font-size:24px; color:#02D9C5; margin-bottom:20px;">What the money is for</h3>
+    
+    <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
+      
+      <!-- Item 1 -->
+      <div style="flex:1 1 45%; display:flex; align-items:flex-start; gap:15px; min-width:250px;">
+        <div style="font-size:28px; color:#146DFF;">🏠</div>
+        <div>
+          <strong>Kill the Mortgage:</strong> Clear the debt immediately so you always have a roof over your head.
+        </div>
+      </div>
+      
+      <!-- Item 2 -->
+      <div style="flex:1 1 45%; display:flex; align-items:flex-start; gap:15px; min-width:250px;">
+        <div style="font-size:28px; color:#146DFF;">🔧</div>
+        <div>
+          <strong>Modify the House:</strong> Pay for ramps, rails, and renovations to make life accessible.
+        </div>
+      </div>
+      
+      <!-- Item 3 -->
+      <div style="flex:1 1 45%; display:flex; align-items:flex-start; gap:15px; min-width:250px;">
+        <div style="font-size:28px; color:#146DFF;">💰</div>
+        <div>
+          <strong>Create an Income:</strong> Invest the lump sum to generate a passive income stream for the rest of your life.
+        </div>
+      </div>
+      
+      <!-- Item 4 -->
+      <div style="flex:1 1 45%; display:flex; align-items:flex-start; gap:15px; min-width:250px;">
+        <div style="font-size:28px; color:#146DFF;">🏥</div>
+        <div>
+          <strong>Medical Costs:</strong> Cover the rehabilitation and surgeries that Medicare doesn't.
+        </div>
+      </div>
+      
     </div>
-    <div class="benefit-card">
-      <h3>Peace of Mind</h3>
-      <p>Focus on recovery or adjusting to new circumstances knowing finances are covered.</p>
-    </div>
-    <div class="benefit-card">
-      <h3>Mortgage & Debt Coverage</h3>
-      <p>Help pay off outstanding debts or mortgage if unable to work.</p>
-    </div>
-    <div class="benefit-card">
-      <h3>Flexible Options</h3>
-      <p>Choose a policy and coverage amount that fits your lifestyle and needs.</p>
-    </div>
+    
   </div>
 </section>
 
-<section class="section gray-bg">
-  <div class="section-gray-content">
-    <h2>What Does “Permanently Unable to Work” Cover Mean?</h2>
 
-    <p>
-      “Permanently Unable to Work” cover is commonly known as Total and Permanent Disability (TPD) cover.
-      It’s often taken out alongside Life Insurance, so you or your family have financial support if you
-      pass away or are medically assessed as unable to work again.
+<!-- TPD DEFINITION SECTION -->
+<section style="background:#f7f9ff; padding:80px 20px; width:100%;">
+  <div style="max-width:1100px; margin:0 auto; text-align:center;">
+
+    <h2 style="font-size:32px; color:#146DFF; margin-bottom:50px;">The Definition Matters</h2>
+    <p style="font-size:18px; line-height:1.7; margin-bottom:50px; max-width:800px; margin-left:auto; margin-right:auto; color:#333;">
+      This is the most important box you will tick. The definition you choose decides how sick you have to be to actually get paid.
     </p>
 
-    <p>
-      If a qualified medical specialist confirms that you’re unlikely to ever return to work, a TPD
-      benefit is paid as a one-off lump sum. This gives you the flexibility to focus on recovery and
-      future planning without the pressure of ongoing income.
-    </p>
+    <div style="display:flex; flex-wrap:wrap; gap:25px; justify-content:center;">
+      
+      <!-- Card 1: Own Occupation -->
+      <div style="flex:1 1 30%; min-width:260px; background:white; border-left:6px solid #02D9C5; padding:30px; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.08); text-align:left; transition:0.3s;">
+        <h3 style="color:#146DFF; margin-bottom:15px;">1. Own Occupation (The Gold Standard)</h3>
+        <p style="font-size:16px; line-height:1.6; color:#333;">
+          If you can't do your job, you get paid. This is the best protection. 
+          For example, a surgeon who loses a finger receives the full payout—even if they could do a different, lower-paying job.
+        </p>
+      </div>
 
-    <p>The payment can be used however you need, including things like:</p>
+      <!-- Card 2: Any Occupation -->
+      <div style="flex:1 1 30%; min-width:260px; background:white; border-left:6px solid #FF8C42; padding:30px; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.08); text-align:left; transition:0.3s;">
+        <h3 style="color:#146DFF; margin-bottom:15px;">2. Any Occupation (The Basic Option)</h3>
+        <p style="font-size:16px; line-height:1.6; color:#333;">
+          If you can do any job, you might get nothing. Standard Super cover only pays if you cannot do any work you are reasonably suited for. Cheaper, but harder to claim.
+        </p>
+      </div>
 
-    <ul>
-      <li>Medical treatment and rehabilitation</li>
-      <li>Boosting your retirement savings</li>
-      <li>Paying off debts and covering living expenses</li>
-      <li>Any other personal or family needs</li>
-    </ul>
+      <!-- Card 3: Non-Working -->
+      <div style="flex:1 1 30%; min-width:260px; background:white; border-left:6px solid #FF3B3F; padding:30px; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.08); text-align:left; transition:0.3s;">
+        <h3 style="color:#146DFF; margin-bottom:15px;">3. Non-Working (Home Duties)</h3>
+        <p style="font-size:16px; line-height:1.6; color:#333;">
+          For stay-at-home parents. Covers you if physically unable to perform daily tasks like cooking, cleaning, or showering—or suffer a major loss of limbs or sight.
+        </p>
+      </div>
 
-    <p>Once the benefit is paid, there are no restrictions on how the money is used—it’s there to support you in the way that works best for your situation.</p>
+    </div>
+
   </div>
 </section>
 
+<!-- Optional hover effect -->
+<style>
+  section div[style*="box-shadow"]:hover {
+    transform: translateY(-6px);
+    box-shadow:0 12px 28px rgba(0,0,0,0.12);
+    transition:0.3s ease;
+  }
+</style>
 
-<section class="section">
-  <div class="section-white-content">
-    <h2>Understanding the Different Occupation Types</h2>
 
-    <p>When you set up your policy, you’ll choose which type of occupation definition applies to you. This affects how your claim would be assessed if you ever need to make one.
+
+<!-- TPD STRUCTURE SECTION -->
+<section style="background:#ffffff; padding:80px 20px; width:100%;">
+  <div style="max-width:1100px; margin:0 auto; text-align:center;">
+
+    <h2 style="font-size:32px; color:#146DFF; margin-bottom:50px;">Structure: Linked vs. Standalone</h2>
+    <p style="font-size:18px; line-height:1.7; margin-bottom:50px; max-width:800px; margin-left:auto; margin-right:auto; color:#333;">
+      Should you bundle it? You can buy TPD on its own, or "link" it to your Life Insurance. Here’s the trade-off:
     </p>
 
-    <p>Here’s a quick guide to the options:</p>
+    <div style="display:flex; flex-wrap:wrap; gap:25px; justify-content:center;">
 
-    <ul>
-      <li><b>Any Occupation:</b> This is for situations where, because of illness or injury, you can’t work in any job that fits your skills, education, or experience.</li>
-      <li><b>Own Occupation:</b> This covers you if you’re unable to do the job you normally do, even if you could work in another role.</li>
-      <li><b>Non-Working:</b> If you’re not currently employed or your work doesn’t qualify for the “own” or “any” occupation types, this option applies. It can pay a lump sum if you can’t perform everyday activities, domestic duties, or if you lose use of a limb or your sight.</li>
-       </ul>
+      <!-- Card 1: Linked -->
+      <div style="flex:1 1 45%; min-width:260px; background:white; border-left:6px solid #02D9C5; padding:30px; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.08); text-align:left; transition:0.3s;">
+        <h3 style="color:#146DFF; margin-bottom:15px;">Option A: Linked</h3>
+        <p style="font-size:16px; line-height:1.6; color:#333;"><strong>The Pro:</strong> It’s cheaper.</p>
+        <p style="font-size:16px; line-height:1.6; color:#333;"><strong>The Con:</strong> Claiming TPD reduces your Life Insurance by the same amount. (e.g., Claim $500k for TPD, Death cover drops $500k)</p>
+      </div>
 
-    <p>Once the benefit is paid, there are no restrictions on how the money is used—it’s there to support you in the way that works best for your situation.</p>
+      <!-- Card 2: Standalone -->
+      <div style="flex:1 1 45%; min-width:260px; background:white; border-left:6px solid #FF8C42; padding:30px; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.08); text-align:left; transition:0.3s;">
+        <h3 style="color:#146DFF; margin-bottom:15px;">Option B: Standalone</h3>
+        <p style="font-size:16px; line-height:1.6; color:#333;"><strong>The Pro:</strong> Claiming TPD doesn’t affect your Life Insurance. Both safety nets stay full.</p>
+        <p style="font-size:16px; line-height:1.6; color:#333;"><strong>The Con:</strong> Premiums are slightly higher.</p>
+      </div>
+
+    </div>
+
+    <!-- Buy-Back Hack Highlight -->
+    <div style="margin-top:40px; background:linear-gradient(135deg,#02D9C5,#146DFF); color:white; padding:30px; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.08); max-width:800px; margin-left:auto; margin-right:auto; text-align:left;">
+      <h3 style="margin-bottom:15px;">💡 The "Buy-Back" Hack</h3>
+      <p style="font-size:16px; line-height:1.6;">
+        If you choose the cheaper "Linked" option, we can often add a "Buy-Back" feature. This lets you repurchase your lost Life Insurance 12 months after a TPD claim. It’s the smart middle ground.
+      </p>
+    </div>
+
   </div>
 </section>
+
+<!-- Hover effect for cards -->
+<style>
+  section div[style*="box-shadow"]:hover {
+    transform: translateY(-6px);
+    box-shadow:0 12px 28px rgba(0,0,0,0.12);
+    transition:0.3s ease;
+  }
+</style>
+
+
+<!-- TPD FAQ SECTION -->
+<section style="background:#f7f9ff; padding:80px 20px; width:100%;">
+  <div style="max-width:900px; margin:0 auto;">
+
+    <h2 style="font-size:32px; color:#146DFF; text-align:center; margin-bottom:50px;">
+      Frequently Asked Questions
+    </h2>
+
+    <!-- FAQ Item 1 -->
+    <div class="faq-item">
+      <button class="faq-question">
+        How much cover do I need?
+        <span>+</span>
+      </button>
+      <div class="faq-answer">
+        <p>
+          Enough to pay off all your debts (mortgage, credit cards) plus a lump sum to generate income for your family. We help you crunch the numbers.
+        </p>
+      </div>
+    </div>
+
+    <!-- FAQ Item 2 -->
+    <div class="faq-item">
+      <button class="faq-question">
+        Can I use my Super?
+        <span>+</span>
+      </button>
+      <div class="faq-answer">
+        <p>
+          Yes, most people have some basic TPD in their Super. But be careful—Super policies are almost always the stricter "Any Occupation" definition. It’s cheap, but it’s hard to claim. We review it to see if it’s actually worth the paper it’s written on.
+        </p>
+      </div>
+    </div>
+
+    <!-- FAQ Item 3 -->
+    <div class="faq-item">
+      <button class="faq-question">
+        Does it cover mental health?
+        <span>+</span>
+      </button>
+      <div class="faq-answer">
+        <p>
+          Yes. Permanent mental illness that prevents you from working is a valid claim under most TPD policies.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .faq-item {
+    background:#ffffff;
+    border-radius:12px;
+    margin-bottom:16px;
+    box-shadow:0 6px 16px rgba(0,0,0,0.08);
+    overflow:hidden;
+  }
+
+  .faq-question {
+    width:100%;
+    background:none;
+    border:none;
+    padding:22px 26px;
+    font-size:18px;
+    font-weight:600;
+    text-align:left;
+    cursor:pointer;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:#000030;
+  }
+
+  .faq-question span {
+    font-size:24px;
+    transition:0.3s;
+  }
+
+  .faq-answer {
+    max-height:0;
+    overflow:hidden;
+    transition:max-height 0.4s ease;
+    padding:0 26px;
+  }
+
+  .faq-answer p {
+    padding-bottom:22px;
+    color:#333;
+    line-height:1.7;
+  }
+
+  .faq-item.active .faq-answer {
+    max-height:200px;
+  }
+
+  .faq-item.active .faq-question span {
+    transform:rotate(45deg);
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+      const item = button.parentElement;
+      item.classList.toggle('active');
+    });
+  });
+</script>
+
+
+<!-- FINAL CTA: TPD PAGE -->
+<section style="background:linear-gradient(135deg,#02D9C5,#146DFF,#AD89FF); padding:80px 20px; width:100%;">
+
+  <div style="
+    max-width:900px;
+    margin:0 auto;
+    background:#ffffff;
+    padding:50px 40px;
+    border-radius:14px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    text-align:center;
+  ">
+
+    <h2 style="font-size:32px; margin-bottom:20px; color:#000030;">
+      Secure your future, no matter what.
+    </h2>
+
+    <p style="
+      font-size:18px;
+      line-height:1.7;
+      margin-bottom:35px;
+      color:#333;
+      max-width:760px;
+      margin-left:auto;
+      margin-right:auto;
+    ">
+      If the worst happens, make sure the house is paid off, and the bills are gone. Let’s build a plan that works.
+    </p>
+
+    <a href="contact.html" class="btn-main">Compare TPD Quotes</a>
+
+  </div>
+
+</section>
+
+
 
 <footer>
-  <div style="max-width:1200px; margin:0 auto; padding:40px 20px; color:#aaa; text-align:center;">
-    <!-- Logo -->
-    <div style="margin-bottom:20px; text-align:center;">
-  <img src="images/insureyou-logo-dark.png" alt="Insureyou Advisory Logo" style="height:80px; max-width:200px;">
-</div>
+  <div class="footer-container">
 
+    <!-- Top: Logo & Brief -->
+    <div class="footer-top">
+      <div class="footer-logo">
+        <img src="images/insureyou-logo-dark.png" alt="Insureyou Advisory Logo">
+      </div>
+      <p class="footer-description">
+        Insureyou Advisory (ABN 21 891 330 783) operates under general advice only. We provide education and options to help you make informed decisions, but cannot give personal advice. All information on this website is for general purposes only.
+      </p>
+    </div>
 
-    <!-- Contact Info -->
-    <p>
-      12/42 King Street, Airport West VIC 3042<br>
-      01 2345 6789 | protect@insureyouadvisory.com.au<br>
-      9am to 5pm AEST
-    </p>
+    <!-- Middle: Links & Contact Info -->
+    <div class="footer-middle">
 
-    <!-- Disclaimer -->
-    <p style="font-size:0.85rem; margin:20px 0;">
-      Insureyou Advisory (ABN XX XXX XXX XXX) operates under Insure Solutions Pty Ltd (AFSL XXXXXXX) and can only give general advice about Personal Insurance. This means we provide information to help you make good decisions but cannot give personal advice or recommendations. Everything on this website is general information only.
-    </p>
-    <p style="font-size:0.85rem; margin-bottom:20px;">
-      Each insurer we partner with has its own terms and conditions. Please review the relevant insurer’s Product Disclosure Statement to see if their products meet your needs.
-    </p>
+      <!-- Links -->
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
+        <a href="fsg.html">Financial Services Guide</a>
+        <a href="pds.html">Product Disclosure Statements</a>
+      </div>
 
-    <!-- Legal Links -->
-    <p>
-      <a href="privacy-policy.html" style="color:#aaa; text-decoration:underline; margin:0 5px;">Privacy Policy</a> |
-      <a href="terms.html" style="color:#aaa; text-decoration:underline; margin:0 5px;">Terms and Conditions</a> |
-      <a href="fsg.html" style="color:#aaa; text-decoration:underline; margin:0 5px;">Financial Services Guide</a> |
-      <a href="pds.html" style="color:#aaa; text-decoration:underline; margin:0 5px;">Product Disclosure Statements</a>
-    </p>
+      <!-- Contact -->
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>12/42 King Street, Airport West VIC 3042 (By appointment only)</p>
+        <p>01 2345 6789 | protect@insureyouadvisory.com.au</p>
+        <p>Mon-Fri 9am to 5pm AEST</p>
+      </div>
 
-<!-- Social Media -->
-<div style="margin:20px 0;">
-<h3>FOLLOW US</h3><br>
-  <a href="https://www.facebook.com/" target="_blank" style="margin:0 10px;">
-    <img src="images/facebook.png" alt="Facebook" style="width:32px; height:32px;">
-  </a>
-  <a href="https://www.instagram.com/" target="_blank" style="margin:0 10px;">
-    <img src="images/instagram.png" alt="Instagram" style="width:32px; height:32px;">
-  </a>
-  <a href="https://www.linkedin.com/" target="_blank" style="margin:0 10px;">
-    <img src="images/linkedin.png" alt="LinkedIn" style="width:32px; height:32px;">
-  </a>
-</div>
+      <!-- Social -->
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
+          <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
+          <a href="https://www.linkedin.com/" target="_blank"><img src="images/linkedin.png" alt="LinkedIn"></a>
+        </div>
+      </div>
 
+    </div>
 
-    <!-- Copyright -->
-    <p style="margin-top:20px;">© 2026 Insureyou Advisory. All rights reserved.</p>
+    <!-- Bottom: Copyright -->
+    <div class="footer-bottom">
+      <p>© 2026 Insureyou Advisory. All rights reserved.</p>
+    </div>
+
   </div>
 </footer>
 
