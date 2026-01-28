@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>About Us – Insureyou Advisory</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Inter", sans-serif;
+}
+
+body{
+  background:#ffffff;
+  color:#000030;
+  line-height:1.5;
+}
+
+/* NAVBAR */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 80px;
+  border-bottom:1px solid #eee;
+}
+
+.logo img{
+  height:48px;
+}
+
+nav a{
+  margin-right:25px;
+  text-decoration:none;
+  color:#000030;
+  font-weight:500;
+}
+
+.btn-main{
+  padding:12px 22px;
+  background: linear-gradient(135deg, #016d61, #0f2c99, #5d2eb5); /* darker teal/blue/purple */
+  color:white;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.btn-main:hover{
+  background: linear-gradient(135deg, #014c49, #0a1c66, #3f1a7f); /* slightly darker on hover */
+}
+
+/* HERO */
+.hero{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:80px 80px;
+  gap:60px;
+  background:#f2f4ff;
+}
+
+.hero-text{
+  max-width:600px;
+}
+
+.hero h1{
+  font-size:42px;
+  margin-bottom:20px;
+}
+
+.hero p{
+  font-size:18px;
+  color:#1a1a4f;
+}
+
+/* SECTIONS */
+.section{
+  padding:80px;
+}
+
+.section h2{
+  font-size:32px;
+  margin-bottom:30px;
+  text-align:center;
+}
+
+.section p{
+  max-width:800px;
+  margin:0 auto 20px auto;
+  text-align:center;
+  color:#333;
+}
+
+/* MISSION & STORY */
+.mission, .story{
+  display:flex;
+  align-items:center;
+  gap:50px;
+  margin-bottom:60px;
+}
+
+.mission img, .story img{
+  width:45%;
+  border-radius:16px;
+  background:#eaeefe;
+  height:500px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#777;
+}
+
+.mission-text, .story-text{
+  width:55%;
+}
+
+/* TEAM */
+.team-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+  margin-top:40px;
+}
+
+.team-member{
+  text-align:center;
+  padding:20px;
+  border-radius:14px;
+  border:1px solid #eee;
+  background:#f7f9ff;
+}
+
+.team-member img{
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  margin-bottom:15px;
+}
+
+/* FOUNDER SECTION (WeLife‑style) */
+.founder {
+  padding:80px 20px;
+  background:#f7f9ff;
+}
+
+.founder h2 {
+  font-size:32px;
+  text-align:center;
+  margin-bottom:40px;
+  color:#146DFF;
+}
+
+.founder-container {
+  display:flex;
+  gap:50px;
+  align-items:flex-start;
+  max-width:1000px;
+  margin:0 auto;
+  flex-wrap:wrap;
+}
+
+.founder-image {
+  text-align:center;
+  flex: 0 0 300px;
+}
+
+.founder-image img {
+  width:300px;
+  height:300px;
+  border-radius:50%;
+  object-fit:cover;
+  margin-bottom:15px;
+}
+
+.founder-image h3 {
+  font-size:26px;
+  margin-bottom:5px;
+}
+
+.founder-role {
+  font-weight:500;
+  color:#555;
+  margin-bottom:15px;
+}
+
+.founder-details {
+  flex:1;
+  font-size:16px;
+  color:#333;
+  line-height:1.6;
+}
+
+.founder-details p,
+.founder-details ul {
+  text-align: left;   /* Make text left-aligned */
+  margin-bottom: 18px;
+}
+
+
+.founder-details p, 
+.founder-details ul {
+  margin-bottom:18px;
+}
+
+.founder-details ul {
+  list-style: disc;
+  margin-left:20px;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .founder-container {
+    flex-direction:column;
+    text-align:center;
+  }
+  .founder-image, .founder-details {
+    width:100%;
+  }
+  .founder-details {
+    text-align:left;
+    padding-top:20px;
+  }
+}
+
+
+/* CTA */
+.cta{
+  padding:80px;
+  background:linear-gradient(135deg,#02D9C5,#146DFF,#AD89FF);
+  color:white;
+  text-align:center;
+}
+
+.cta h2{
+  font-size:34px;
+  margin-bottom:20px;
+}
+
+/* FOOTER */
+footer{
+  background:#000030;
+  color:#aaa;
+  text-align:center;
+  padding:40px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    <a href="index.html">
+  <img src="images/insureyou-logo.png" alt="Insureyou Advisory Logo">
+</a>
+  </div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="insurances.html">Insurances</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="partners.html">Partners</a>
+    <a href="contact.html" class="btn-main">Get a Quote</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>About Page</h1>
+    <p>Providing independent, tailored insurance advice to help individuals and families secure their financial future.</p>
+  </div>
+  <div class="hero-image">Hero Image Placeholder</div>
+</section>
+
+<!-- MISSION -->
+<section class="section mission-story" style="background:#ffffff; padding:60px 20px; text-align:left; max-width:1000px; margin:0 auto; border-radius:12px;">
+  
+  <!-- Mission -->
+  <h2>The Mission</h2>
+  <p>Make quality insurance simple. Protecting your future shouldn't be a headache. We stripped away the jargon and the barriers so you get straight answers and stress-free cover.</p>
+  
+  <!-- CTA -->
+  <center><a href="contact.html" class="btn-main" style="margin:15px 0; display:inline-block;">Book a Call</a></center>
+  <p>Let’s have a quick chat. 15 minutes. Free advice. Zero pressure.</p>
+
+  <hr style="margin:40px 0; border:none; height:2px; background:linear-gradient(135deg,#016d61,#0f2c99,#5d2eb5); border-radius:2px;">
+
+  <!-- Story -->
+  <h2>Insurance was broken. So we fixed it.</h2>
+  
+  <p><b>Why we started.</b> We noticed a problem: getting quality life insurance had become a nightmare. It was confusing, difficult, and full of barriers for the people who needed it most.</p>
+
+  <p><b>The Experience.</b> We brought nearly a decade of advice and claims experience to the table. We knew the system was failing everyday Aussies, so we launched Insureyou Advisory in 2025 to close the gap. No fluff, just protection you can trust.</p>
+
+  <p><b>Where we are now.</b> We partner with trusted financial advisers, mortgage brokers, and accountants across Australia. We cut through the noise and compare the country's leading insurers to find the policy that fits your life—not just a sales quota.</p>
+  
+</section>
+
+
+<section class="section team" style="background:#f7f9ff; padding:60px 20px; text-align:center; border-radius:12px; max-width:1000px; margin:0 auto;">
+  <h2>Meet The Team</h2>
+  
+  <div class="team-member" style="margin-top:40px;">
+    <img src="images/team1.png" alt="Nathan Soti" style="width:200px; height:200px; border-radius:50%; object-fit:cover; margin-bottom:20px;">
+    
+    <h3>Meet Nathan</h3>
+    
+    <p>Nathan lives and breathes this stuff. With a Bachelor of Economics & Finance, he has spent his entire career in the trenches of the life insurance industry.</p>
+    
+    <p>He has worked on both sides of the fence as a trusted advisor and directly for industry giant TAL so he knows exactly how insurers think and operate. It’s this expertise that saw him recognised as Advisor of the Year at iSelect in 2014.</p>
+    
+    <p>When you work with Nathan, you aren't just getting a broker; you're getting an industry veteran who knows how to get the best result for you.</p>
+  </div>
+</section>
+
+
+
+
+<section class="cta">
+  <h2>Ready to Protect Your Future?</h2>
+  <a href="contact.html" class="btn-main">Request a Quote</a>
+</section>
+
+<footer>
+  <div style="max-width:1200px; margin:0 auto; padding:40px 20px; color:#aaa; text-align:center;">
+    <!-- Logo -->
+    <div style="margin-bottom:20px; text-align:center;">
+  <img src="images/insureyou-logo-dark.png" alt="Insureyou Advisory Logo" style="height:80px; max-width:200px;">
+</div>
+
+
+    <!-- Contact Info -->
+    <p>
+      12/42 King Street, Airport West VIC 3042<br>
+      01 2345 6789 | protect@insureyouadvisory.com.au<br>
+      9am to 5pm AEST
+    </p>
+
+    <!-- Disclaimer -->
+    <p style="font-size:0.85rem; margin:20px 0;">
+      Insureyou Advisory (ABN XX XXX XXX XXX) operates under Insure Solutions Pty Ltd (AFSL XXXXXXX) and can only give general advice about Personal Insurance. This means we provide information to help you make good decisions but cannot give personal advice or recommendations. Everything on this website is general information only.
+    </p>
+    <p style="font-size:0.85rem; margin-bottom:20px;">
+      Each insurer we partner with has its own terms and conditions. Please review the relevant insurer’s Product Disclosure Statement to see if their products meet your needs.
+    </p>
+
+    <!-- Legal Links -->
+    <p>
+      <a href="privacy-policy.html" style="color:#aaa; text-decoration:underline; margin:0 5px;">Privacy Policy</a> |
+      <a href="terms.html" style="color:#aaa; text-decoration:underline; margin:0 5px;">Terms and Conditions</a> |
+      <a href="fsg.html" style="color:#aaa; text-decoration:underline; margin:0 5px;">Financial Services Guide</a> |
+      <a href="pds.html" style="color:#aaa; text-decoration:underline; margin:0 5px;">Product Disclosure Statements</a>
+    </p>
+
+<!-- Social Media -->
+<div style="margin:20px 0;">
+<h3>FOLLOW US</h3><br>
+  <a href="https://www.facebook.com/" target="_blank" style="margin:0 10px;">
+    <img src="images/facebook.png" alt="Facebook" style="width:32px; height:32px;">
+  </a>
+  <a href="https://www.instagram.com/" target="_blank" style="margin:0 10px;">
+    <img src="images/instagram.png" alt="Instagram" style="width:32px; height:32px;">
+  </a>
+  <a href="https://www.linkedin.com/" target="_blank" style="margin:0 10px;">
+    <img src="images/linkedin.png" alt="LinkedIn" style="width:32px; height:32px;">
+  </a>
+</div>
+
+
+    <!-- Copyright -->
+    <p style="margin-top:20px;">© 2026 Insureyou Advisory. All rights reserved.</p>
+  </div>
+</footer>
+
+
+</body>
+</html>

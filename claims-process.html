@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Claims Process – Insureyou Advisory</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Inter", sans-serif;
+}
+
+body{
+  background:#ffffff;
+  color:#000030;
+  line-height:1.5;
+}
+
+/* NAVBAR */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 80px;
+  border-bottom:1px solid #eee;
+}
+
+.logo img{
+  height:48px;
+}
+
+nav a{
+  margin-right:25px;
+  text-decoration:none;
+  color:#000030;
+  font-weight:500;
+}
+
+.btn-main{
+  padding:12px 22px;
+  background: linear-gradient(135deg, #016d61, #0f2c99, #5d2eb5); /* darker teal/blue/purple */
+  color:white;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.btn-main:hover{
+  background: linear-gradient(135deg, #014c49, #0a1c66, #3f1a7f); /* slightly darker on hover */
+}
+
+/* HERO */
+.hero{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:80px 40px;
+  gap:60px;
+  background:#f7f2ff;
+  text-align:center;
+}
+
+.hero h1{
+  font-size:42px;
+  color:#1a1a4f;
+}
+
+.hero p{
+  font-size:18px;
+  color:#333;
+  margin-top:15px;
+}
+
+/* STEPS */
+.steps{
+  padding:80px;
+  max-width:1000px;
+  margin:0 auto;
+}
+
+.steps h2{
+  text-align:center;
+  font-size:32px;
+  margin-bottom:50px;
+}
+
+.step-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:30px;
+}
+
+.step-card{
+  background:#f7f9ff;
+  padding:30px;
+  border-radius:14px;
+  border:1px solid #eee;
+  text-align:center;
+  transition:.2s;
+}
+
+.step-card:hover{
+  transform:translateY(-5px);
+}
+
+.step-card h3{
+  margin-bottom:15px;
+  color:#146DFF;
+}
+
+.step-card p{
+  color:#333;
+}
+
+/* CTA */
+.cta{
+  padding:80px;
+  background:linear-gradient(135deg,#02D9C5,#146DFF,#AD89FF);
+  color:white;
+  text-align:center;
+}
+
+.cta h2{
+  font-size:34px;
+  margin-bottom:20px;
+}
+
+/* FOOTER */
+footer{
+  background:#000030;
+  color:#aaa;
+  text-align:center;
+  padding:40px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    <a href="index.html">
+  <img src="images/insureyou-logo.png" alt="Insureyou Advisory Logo">
+</a>
+  </div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="insurances.html">Insurances</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="partners.html">Partners</a>
+    <a href="contact.html" class="btn-main">Get a Quote</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <h1>Our Claims Process</h1>
+    <p>Easy-to-follow steps to make your insurance claim smooth and stress-free.</p>
+  </div>
+</section>
+
+<section class="steps">
+  <h2>Step-by-Step Workflow</h2>
+  <div class="step-grid">
+    <div class="step-card">
+      <h3>Step 1: Notify Us</h3>
+      <p>Contact our team immediately after an event to start your claim process.</p>
+    </div>
+    <div class="step-card">
+      <h3>Step 2: Provide Documents</h3>
+      <p>Submit required forms, medical certificates, and supporting documents.</p>
+    </div>
+    <div class="step-card">
+      <h3>Step 3: Claim Assessment</h3>
+      <p>Our team reviews your claim quickly and transparently to assess eligibility.</p>
+    </div>
+    <div class="step-card">
+      <h3>Step 4: Receive Payment</h3>
+      <p>Approved claims are paid promptly so you can focus on recovery and wellbeing.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Need Assistance With Your Claim?</h2>
+  <a href="contact.html" class="btn-main">Contact Us Today</a>
+</section>
+
+<footer>
+  <div style="max-width:1200px; margin:0 auto; padding:40px 20px; color:#aaa; text-align:center;">
+    <!-- Logo -->
+    <div style="margin-bottom:20px; text-align:center;">
+  <img src="images/insureyou-logo-dark.png" alt="Insureyou Advisory Logo" style="height:80px; max-width:200px;">
+</div>
+
+
+    <!-- Contact Info -->
+    <p>
+      12/42 King Street, Airport West VIC 3042<br>
+      01 2345 6789 | protect@insureyouadvisory.com.au<br>
+      9am to 5pm AEST
+    </p>
+
+    <!-- Disclaimer -->
+    <p style="font-size:0.85rem; margin:20px 0;">
+      Insureyou Advisory (ABN XX XXX XXX XXX) operates under Insure Solutions Pty Ltd (AFSL XXXXXXX) and can only give general advice about Personal Insurance. This means we provide information to help you make good decisions but cannot give personal advice or recommendations. Everything on this website is general information only.
+    </p>
+    <p style="font-size:0.85rem; margin-bottom:20px;">
+      Each insurer we partner with has its own terms and conditions. Please review the relevant insurer’s Product Disclosure Statement to see if their products meet your needs.
+    </p>
+
+    <!-- Legal Links -->
+    <p>
+      <a href="privacy-policy.html" style="color:#aaa; text-decoration:underline; margin:0 5px;">Privacy Policy</a> |
+      <a href="terms.html" style="color:#aaa; text-decoration:underline; margin:0 5px;">Terms and Conditions</a> |
+      <a href="fsg.html" style="color:#aaa; text-decoration:underline; margin:0 5px;">Financial Services Guide</a> |
+      <a href="pds.html" style="color:#aaa; text-decoration:underline; margin:0 5px;">Product Disclosure Statements</a>
+    </p>
+
+    <!-- Copyright -->
+    <p style="margin-top:20px;">© 2026 Insureyou Advisory. All rights reserved.</p>
+  </div>
+</footer>
+
+
+</body>
+</html>

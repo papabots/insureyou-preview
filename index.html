@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Insureyou Advisory – Smart Insurance Advice</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Inter", sans-serif;
+}
+
+body{
+  background:#ffffff;
+  color:#000030;
+  line-height:1.6;
+}
+
+/* NAVBAR */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 80px;
+  border-bottom:1px solid #eee;
+}
+
+.logo img{
+  height:48px;
+}
+
+nav a{
+  margin-right:25px;
+  text-decoration:none;
+  color:#000030;
+  font-weight:500;
+}
+
+.btn-main{
+  padding:12px 22px;
+  background: linear-gradient(135deg, #016d61, #0f2c99, #5d2eb5); /* darker teal/blue/purple */
+  color:white;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.btn-main:hover{
+  background: linear-gradient(135deg, #014c49, #0a1c66, #3f1a7f); /* slightly darker on hover */
+}
+
+
+/* HERO SLIDER */
+.hero{
+  position:relative;
+  width:100%;
+  height:450px;
+  overflow:hidden;
+  margin-bottom:50px;
+}
+
+.slide{
+  position:absolute;
+  width:100%;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 80px;
+  background:#f2f7ff;
+  transition:opacity 1s ease;
+  opacity:0;
+}
+
+.slide.active{
+  opacity:1;
+}
+
+.hero-text{
+  max-width:500px;
+}
+
+.hero-text h1{
+  font-size:42px;
+  margin-bottom:20px;
+  color:#1a1a4f;
+}
+
+.hero-text p{
+  font-size:18px;
+  margin-bottom:20px;
+  color:#333;
+}
+
+/* SERVICES */
+.services{
+  max-width:1200px;
+  margin:50px auto;
+  padding:0 20px;
+}
+
+.services h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #146DFF;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.service-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  border: 1px solid #eee;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card h3 {
+  margin-bottom: 15px;
+  color: #02D9C5;
+}
+
+.service-card p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Mobile: stack vertically */
+@media(max-width:900px){
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.service-card img{
+  width:100%;
+  height:150px;
+  object-fit:cover;
+  border-radius:12px;
+  margin-bottom:15px;
+}
+
+/* PROCESS STEPS */
+.process{
+  background:#ffffff;
+  padding:60px 20px;
+  text-align:center;
+}
+
+.process h2{
+  font-size:32px;
+  margin-bottom:40px;
+  color:#146DFF;
+}
+
+.process-steps{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:30px;
+}
+
+.step-card{
+  background:white;
+  padding:30px;
+  border-radius:12px;
+  border:1px solid #eee;
+}
+
+.step-card h3{
+  margin-bottom:10px;
+  color:#02D9C5;
+}
+
+/* TESTIMONIALS */
+.testimonials{
+  padding:60px 20px;
+  max-width:1200px;
+  margin:50px auto;
+  text-align:center;
+}
+
+.hero-image {
+  width: 420px;       /* or 100% if you want full width */
+  height: 300px;      /* adjust height as needed */
+  border-radius: 12px;
+  object-fit: cover;  /* makes sure the image covers the box without stretching */
+}
+
+
+.testimonials h2{
+  font-size:32px;
+  margin-bottom:40px;
+  color:#146DFF;
+}
+
+.test-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+
+.test-card{
+  background:#f7f9ff;
+  padding:25px;
+  border-radius:12px;
+  font-style:italic;
+}
+
+/* WHAT WE DO SECTION */
+.what-we-do {
+  background:#f7f9ff;
+  padding:60px 20px;
+  text-align:center;
+}
+
+.what-we-do .container {
+  max-width:1200px;
+  margin:0 auto;
+}
+
+.what-we-do h2 {
+  font-size:32px;
+  margin-bottom:40px;
+  color:#146DFF;
+}
+
+.do-steps {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+.do-card {
+  background:white;
+  padding:25px;
+  border-radius:12px;
+  border:1px solid #eee;
+  text-align:center;
+}
+
+.do-card .icon {
+  font-size:40px;
+  margin-bottom:15px;
+}
+
+.do-card h3 {
+  margin-bottom:15px;
+  color:#02D9C5;
+}
+
+.do-card p {
+  color:#333;
+  line-height:1.6;
+  font-size:16px;
+}
+
+/* Responsive tweaks */
+@media(max-width:900px){
+  .do-steps {
+    grid-template-columns:1fr;
+  }
+}
+
+.section-separator {
+  width: 100%;
+  height: 6px; /* thickness of the border */
+  margin: 0 auto;
+  background: linear-gradient(135deg, #016d61, #0f2c99, #5d2eb5); /* same gradient as buttons */
+  border-radius: 3px; /* rounded edges */
+}
+
+
+
+/* CTA */
+.cta{
+  padding:80px;
+  background:linear-gradient(135deg,#02D9C5,#146DFF,#AD89FF);
+  color:white;
+  text-align:center;
+}
+
+.cta h2{
+  font-size:34px;
+  margin-bottom:20px;
+}
+
+/* FOOTER */
+footer{
+  background:#000030;
+  color:#aaa;
+  text-align:center;
+  padding:40px;
+}
+
+/* Responsive */
+@media(max-width:900px){
+  header{
+    flex-direction:column;
+    gap:15px;
+  }
+
+  .slide{
+    flex-direction:column;
+    text-align:center;
+    padding:0 20px;
+  }
+
+  .service-grid, .process-steps, .test-grid{
+    grid-template-columns:1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    <a href="index.html">
+  <img src="images/insureyou-logo.png" alt="Insureyou Advisory Logo">
+</a>
+  </div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="insurances.html">Insurances</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="partners.html">Partners</a>
+    <a href="contact.html" class="btn-main">Get a Quote</a>
+  </nav>
+</header>
+
+<!-- HERO SLIDER -->
+<section class="hero">
+  <div class="slide active">
+    <div class="hero-text">
+      <h1>We do the heavy lifting. You get the best cover.</h1>
+      <p>No spreadsheets. No jargon. Just some Aussie brokers who care enough to help you find the sweet spot for your life and your budget.</p>
+      <p><b>Got 15 minutes? Free advice. Zero pressure.</b></p>
+      <a href="contact.html" class="btn-main">Request Tailored Quote</a>
+    </div>
+    <img src="images/hero1.png" alt="Hero Image" class="hero-image">
+  </div>
+</section>
+
+<!-- SERVICES / WHAT WE COMPARE -->
+<section class="services">
+  <h2>What We Compare</h2>
+  <div class="service-grid">
+    <!-- Income Protection -->
+    <div class="service-card">
+      <div class="service-icon" style="font-size:40px; margin-bottom:15px;">💼</div>
+      <h3>Income Protection</h3>
+      <p>Keep the paychecks coming. If you can't work due to sickness or injury, this replaces up to 70% of your salary. It keeps the mortgage paid and food on the table while you recover.</p>
+    </div>
+
+    <!-- Life Insurance -->
+    <div class="service-card">
+      <div class="service-icon" style="font-size:40px; margin-bottom:15px;">❤️</div>
+      <h3>Life Insurance</h3>
+      <p>Secure their future. A tax-free lump sum for your family if you pass away or become terminally ill. It clears debts and ensures they are financially safe, no matter what.</p>
+    </div>
+
+    <!-- Total & Permanent Disability -->
+    <div class="service-card">
+      <div class="service-icon" style="font-size:40px; margin-bottom:15px;">♿</div>
+      <h3>Total & Permanent Disability (TPD)</h3>
+      <p>Replace your future income. If an injury or illness stops you from working ever again, this pays out a lump sum. It covers medical costs, lifestyle changes, and the career you lost.</p>
+    </div>
+
+    <!-- Trauma / Critical Illness -->
+    <div class="service-card">
+      <div class="service-icon" style="font-size:40px; margin-bottom:15px;">➕</div>
+      <h3>Trauma (Critical Illness)</h3>
+      <p>Cash for recovery. An immediate cash injection if you suffer a major medical event (like cancer, heart attack, or stroke). Use it for treatment, to clear the mortgage, or just to take time off.</p>
+    </div>
+  </div>
+  
+  <br>
+  <center><a href="contact.html" class="btn-main">Get a Quote</a></center>
+</section>
+
+
+<!-- Gradient Border / Separator -->
+<div class="section-separator"></div>
+
+
+<!-- PROCESS STEPS -->
+<section class="process">
+  <h2>How We Make This Easy</h2>
+  <div class="process-steps">
+    <div class="step-card">
+      <h3>1</h3>
+      <p><b>15min Intro-Consultation</b></p>
+      <p>This is a simple conversation about your life and what you want to protect. Once we learn what matters - we will work with you to ensure it’s protected.</p>
+    </div>
+    <div class="step-card">
+      <h3>2</h3>
+      <p><b>Comparison & Application</b></p>
+      <p>We will provide you with market leading quotes, explain the differences in the products and then help you apply for the insurance which will protect you & your family.</p>
+    </div>
+    <div class="step-card">
+      <h3>3</h3>
+      <p><b>Ongoing Support</b></p>
+      <p>We will check in every 12 months to ensure your cover is still suitable for you & provide you peace of mind that it’s still competitive and answer any ongoing questions you may have.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE DO -->
+<section class="what-we-do">
+  <div class="container">
+    <h2>Here’s What We Do</h2>
+    <div class="do-steps">
+      <div class="do-card">
+        <div class="icon">🔍</div>
+        <h3>We Shop. You Save.</h3>
+        <p>We scan 9 of Australia's top insurers and audit your Super to find the best deal. We work for you and not the insurance companies, saving you hours of research. The best part? It costs you $0 extra to use us.</p>
+      </div>
+      <div class="do-card">
+        <div class="icon">🤝</div>
+        <h3>One Human. Zero Jargon.</h3>
+        <p>Forget call centers. You get a dedicated advisor who explains the numbers in plain English and tweaks the cover to fit your budget. From your first quote to handling a claim, we are your single point of contact.</p>
+      </div>
+      <div class="do-card">
+        <div class="icon">🛡️</div>
+        <h3>No Nasty Surprises.</h3>
+        <p>We handle medical pre-assessments upfront to ensure your cover is watertight. We find the exclusions before you sign, so you aren't hit with fine-print traps later. Just solid protection that actually pays out.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 EASY STEPS SECTION -->
+<section class="three-steps-section" style="background:#FFFFFF; padding:60px 20px; text-align:center;">
+  <div class="container" style="max-width:1000px; margin:0 auto;">
+    <h2 style="color:#146DFF; margin-bottom:30px;">Get the best cover tailored to your needs in 3 easy steps</h2>
+    <p style="font-size:18px; margin-bottom:40px;">DIY insurance is a headache. We search the market and filter the noise so you can decide with confidence.</p>
+    
+    <div class="step-grid" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:25px;">
+      <div class="step-card" style="background:white; padding:25px; border-radius:12px; border:1px solid #eee;">
+        <div class="icon" style="font-size:40px; margin-bottom:15px;">💬</div>
+        <h3>1. The 15-Minute Chat</h3>
+        <p>Tell us what matters to you. No hard sell, just a quick conversation to spot the gaps in your protection.</p>
+      </div>
+      
+      <div class="step-card" style="background:white; padding:25px; border-radius:12px; border:1px solid #eee;">
+        <div class="icon" style="font-size:40px; margin-bottom:15px;">✅</div>
+        <h3>2. Compare & Apply</h3>
+        <p>We bring you the best quotes and explain the fine print in plain English. You pick the winner; we handle the paperwork.</p>
+      </div>
+      
+      <div class="step-card" style="background:white; padding:25px; border-radius:12px; border:1px solid #eee;">
+        <div class="icon" style="font-size:40px; margin-bottom:15px;">📅</div>
+        <h3>3. Ongoing Support</h3>
+        <p>We don't ghost you. We check in every year to make sure your cover still fits your life, and the price is still right.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Partner Logos with Smooth Marquee -->
+<section class="partners-section" style="background:#f7f9ff; padding:60px 20px; text-align:center;">
+  <div class="container" style="max-width:1000px; margin:0 auto;">
+    <h2 style="color:#146DFF; margin-bottom:30px;">We don't play favorites.</h2>
+    <p style="font-size:18px; margin-bottom:40px; color:#333;">
+      We aren't tied to a single provider. We make Australia’s top insurers compete for your business to ensure you get the right cover at the right price. Same big brands, just better advice.
+    </p>
+
+    <!-- Marquee Container -->
+    <div class="partner-marquee" style="overflow:hidden; white-space:nowrap;">
+      <div class="marquee-content" style="display:inline-flex; gap:50px; animation: marquee 30s linear infinite;">
+        <img src="images/partner1.png" alt="Partner 1" style="height:60px; width:150px; object-fit:contain;">
+        <img src="images/partner2.png" alt="Partner 2" style="height:60px; width:150px; object-fit:contain;">
+        <img src="images/partner3.png" alt="Partner 3" style="height:60px; width:150px; object-fit:contain;">
+        <img src="images/partner4.png" alt="Partner 4" style="height:60px; width:150px; object-fit:contain;">
+        <img src="images/partner5.png" alt="Partner 5" style="height:60px; width:150px; object-fit:contain;">
+        <img src="images/partner6.png" alt="Partner 6" style="height:60px; width:150px; object-fit:contain;">
+        <img src="images/partner7.png" alt="Partner 7" style="height:60px; width:150px; object-fit:contain;">
+        <img src="images/partner8.png" alt="Partner 8" style="height:60px; width:150px; object-fit:contain;">
+        <img src="images/partner9.png" alt="Partner 9" style="height:60px; width:150px; object-fit:contain;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+@keyframes marquee {
+  0%   { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+.partner-marquee .marquee-content {
+  display: inline-flex;
+}
+</style>
+
+
+<!-- EXPERT ADVICE SECTION -->
+<section class="expert-advice" style="background:#ffffff; padding:60px 20px; text-align:center;">
+  <div class="container" style="max-width:900px; margin:0 auto; text-align:left;">
+    
+    <h2 style="text-align:center; color:#146DFF; font-size:32px; margin-bottom:40px;">Expert Advice. Zero Cost.</h2>
+
+    <!-- Section 1: Price Tag -->
+    <p style="font-size:18px; margin-bottom:10px;">🏷️ <strong>Like a mortgage broker, but for your life.</strong></p>
+    <ul style="list-style:none; padding-left:0; line-height:1.8; font-size:16px; margin-bottom:30px;">
+      <li>✅ We hunt down the best policy from 9+ top insurers and handle the boring paperwork.</li>
+      <li>✅ It doesn’t cost you a cent—the insurers pay us, but we work for you.</li>
+      <li>✅ You get the same price (or better) than going direct, with none of the hassle.</li>
+    </ul>
+
+    <!-- Section 2: Unbiased / Thorough -->
+    <p style="font-size:18px; margin-bottom:10px;">⚖️ <strong>Unbiased and thorough.</strong></p>
+    <ul style="list-style:none; padding-left:0; line-height:1.8; font-size:16px; margin-bottom:30px;">
+      <li>✅ We don't play favorites. We get paid the same rate by everyone, so our only goal is finding that "Goldilocks" plan—better than your default Super, but not overpriced.</li>
+      <li>✅ We check the fine print to ensure you aren't paying for junk.</li>
+    </ul>
+
+    <!-- Section 3: We don't ghost you -->
+    <p style="font-size:18px; margin-bottom:10px;">🛟 <strong>We don't ghost you.</strong></p>
+    <ul style="list-style:none; padding-left:0; line-height:1.8; font-size:16px;">
+      <li>✅ We’re in it for the long haul.</li>
+      <li>✅ We handle annual reviews to keep your premiums competitive, and if the worst happens, we manage the claim process so you can focus on your family.</li>
+    </ul>
+
+  </div>
+</section>
+
+<!-- WHO NEEDS THIS SECTION -->
+<section class="who-needs-this" style="background:#f7f9ff; padding:60px 20px; text-align:center;">
+  <div class="container" style="max-width:1000px; margin:0 auto; text-align:left;">
+
+    <h2 style="text-align:center; color:#146DFF; font-size:32px; margin-bottom:30px;">Who Needs This?</h2>
+    <p style="text-align:center; font-size:18px; margin-bottom:30px;">
+      If people are counting on your paycheck, life insurance isn’t optional; it’s a must!
+    </p>
+
+    <div style="text-align:center; margin-bottom:50px;">
+      <a href="contact.html" class="btn-main">Get a Quote</a>
+    </div>
+
+    <!-- Grid for audience types -->
+    <div class="needs-grid" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:40px;">
+
+      <!-- Couples & Families -->
+      <div class="needs-card" style="background:#f7f9ff; padding:30px; border-radius:16px; text-align:left; box-shadow:0 8px 20px rgba(0,0,0,0.08); transition:0.3s;">
+        <center><div class="icon" style="font-size:40px; margin-bottom:15px;">👨‍👩‍👧‍👦</div></center>
+        <center><h3 style="margin-bottom:15px; color:#146DFF;">Couples & Families</h3></center>
+        <p>Your family relies on your paycheck to keep the world turning. Insurance makes sure that world stays secure, even if you aren't there.</p>
+        <ul style="list-style:none; padding-left:0; line-height:1.6; margin-top:15px;">
+          <li>💖 <strong>Life Insurance:</strong> Keeps the mortgage paid and the fridge full if you pass away unexpectedly.</li>
+          <li>💵 <strong>Income Protection:</strong> Keeps the money coming in if sickness or injury stops you from working.</li>
+        </ul>
+      </div>
+
+      <!-- Business Owners & Self-Employed -->
+      <div class="needs-card" style="background:#f7f9ff; padding:30px; border-radius:16px; text-align:left; box-shadow:0 8px 20px rgba(0,0,0,0.08); transition:0.3s;">
+        <center><div class="icon" style="font-size:40px; margin-bottom:15px;">💼</div></center>
+        <center><h3 style="margin-bottom:15px; color:#146DFF;">Business Owners & Self-Employed</h3></center>
+        <p>You’ve poured everything into your business, and you don't get paid sick leave. We protect the empire you’ve built.</p>
+        <ul style="list-style:none; padding-left:0; line-height:1.6; margin-top:15px;">
+          <li>💵 <strong>Income Protection:</strong> Covers your salary if you’re too sick to run the show (essential since you don't have corporate sick days).</li>
+          <li>💖 <strong>Life Insurance:</strong> Can fund a buy/sell agreement so your business partners or family aren't left with a mess if you have to exit the business suddenly.</li>
+        </ul>
+      </div>
+
+      <!-- Young Professionals -->
+      <div class="needs-card" style="background:#f7f9ff; padding:30px; border-radius:16px; text-align:left; box-shadow:0 8px 20px rgba(0,0,0,0.08); transition:0.3s;">
+        <center><div class="icon" style="font-size:40px; margin-bottom:15px;">👔</div></center>
+        <center><h3 style="margin-bottom:15px; color:#146DFF;">Young Professionals</h3></center>
+        <p>You’re just starting to build wealth. Your biggest asset right now isn't your savings account. It's your future earning potential.</p>
+        <ul style="list-style:none; padding-left:0; line-height:1.6; margin-top:15px;">
+          <li>🛡️ <strong>Disability Insurance:</strong> Replaces the millions you would have earned over your career if a permanent disability stops you from working ever again.</li>
+          <li>💵 <strong>Income Protection:</strong> Protects your hard-earned savings and stops you from having to move back in with Mum and Dad if you're out of action for a few months.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Optional Hover Effect -->
+<style>
+  .needs-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+  }
+</style>
+
+
+<!-- FAQ SECTION -->
+<section class="faq" style="background:#ffffff; padding:60px 20px;">
+  <div class="container" style="max-width:1000px; margin:0 auto;">
+    <h2 style="text-align:center; font-size:32px; color:#146DFF; margin-bottom:40px;">FAQ</h2>
+
+    <div class="faq-card" style="background:white; padding:25px; border-radius:12px; margin-bottom:20px; box-shadow:0 4px 8px rgba(0,0,0,0.05);">
+      <h3>Do I actually need personal insurance?</h3>
+      <p>If you are financially independent, the answer is usually yes. Ask yourself these four questions:</p>
+      <ul>
+        <li><b>Income Protection:</b> Could I pay rent and buy food if I couldn't work for 6 months?</li>
+        <li><b>Life Insurance:</b> Would my family be financially okay if I wasn't around tomorrow?</li>
+        <li><b>Disability:</b> Could I afford to retire today if an injury stopped me from ever working again?</li>
+        <li><b>Trauma:</b> Could I afford huge medical bills and time off work to fight cancer or a heart attack?</li>
+      </ul>
+    </div>
+
+    <div class="faq-card" style="background:white; padding:25px; border-radius:12px; margin-bottom:20px; box-shadow:0 4px 8px rgba(0,0,0,0.05);">
+      <h3>How much cover do I need?</h3>
+      <p>There is no "one size fits all." It depends on your debts, family situation, and lifestyle. We help you run the numbers so you are fully covered for the worst-case scenario without paying for fluff you don't need.</p>
+    </div>
+
+    <div class="faq-card" style="background:white; padding:25px; border-radius:12px; margin-bottom:20px; box-shadow:0 4px 8px rgba(0,0,0,0.05);">
+      <h3>How much does it cost?</h3>
+      <p>It depends on your age, health, job, and the cover you choose. After a 10-minute chat, we can scan the market to find you the best value. Using us doesn't cost you a cent extra; insurers pay us.</p>
+    </div>
+
+    <div class="faq-card" style="background:white; padding:25px; border-radius:12px; margin-bottom:20px; box-shadow:0 4px 8px rgba(0,0,0,0.05);">
+      <h3>How do I know I’m getting the best price?</h3>
+      <p>We compare 10 of Australia’s top insurers, covering ~91% of the quality market. We find the "sweet spot"—affordable, reliable policies without unnecessary exclusions.</p>
+    </div>
+
+    <div class="faq-card" style="background:white; padding:25px; border-radius:12px; margin-bottom:20px; box-shadow:0 4px 8px rgba(0,0,0,0.05);">
+      <h3>Can I pay via my Super fund?</h3>
+      <p>Yes. You can pay for Life, TPD, and Income Protection through Super.</p>
+      <ul>
+        <li><b>Pro:</b> Saves your monthly cash flow and often gives a 15% tax rebate.</li>
+        <li><b>Con:</b> Reduces retirement savings (can be topped up manually). We help weigh the pros & cons.</li>
+      </ul>
+    </div>
+
+    <div class="faq-card" style="background:white; padding:25px; border-radius:12px; margin-bottom:20px; box-shadow:0 4px 8px rgba(0,0,0,0.05);">
+      <h3>I already have insurance in my Super—isn't that enough?</h3>
+      <p>Default Super cover is generic and not medically underwritten upfront. We set up tailored policies so you know exactly where you stand.</p>
+    </div>
+
+    <div class="faq-card" style="background:white; padding:25px; border-radius:12px; margin-bottom:20px; box-shadow:0 4px 8px rgba(0,0,0,0.05);">
+      <h3>Why use us instead of going directly?</h3>
+      <p>Three reasons: Quality, Clarity, and Claims.</p>
+      <ul>
+        <li><b>Quality:</b> Premium policies with better protection.</li>
+        <li><b>Clarity:</b> Policies tailored to you, not generic products.</li>
+        <li><b>Claims:</b> Higher payout rates when a specialist manages the claim. And it's free for you!</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- READY TO CHAT CTA -->
+<section class="ready-chat" style="background:#f7f9ff; padding:60px 20px; text-align:center;">
+  <div class="container" style="max-width:800px; margin:0 auto; background:white; padding:40px; border-radius:12px; box-shadow:0 6px 15px rgba(0,0,0,0.08);">
+    <h2 style="font-size:32px; color:#146DFF; margin-bottom:20px;">Ready to cross this off your list?</h2>
+    <p style="font-size:18px; margin-bottom:30px; color:#333;">15 minutes is all it takes to get expert advice and real peace of mind. No cost, no pressure, just good cover.</p>
+    <a href="contact.html" class="btn-main" style="padding:15px 30px; font-size:18px;">Book a Free Chat</a>
+  </div>
+</section>
+
+
+
+<!-- Gradient Border / Separator -->
+<div class="section-separator"></div>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <h2>What Our Clients Say</h2>
+  <div class="test-grid">
+    <div class="test-card">“Very professional and easy to work with. Excellent advice.”</div>
+    <div class="test-card">“Clear insurance solutions without pressure.”</div>
+    <div class="test-card">“Highly recommended for comprehensive cover.”</div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Protect Your Future Today</h2>
+  <a href="contact.html" class="btn-main">Get Your Free Quote</a>
+</section>
+
+<footer>
+  <div style="max-width:1200px; margin:0 auto; padding:40px 20px; color:#aaa; text-align:center;">
+    <!-- Logo -->
+    <div style="margin-bottom:20px; text-align:center;">
+  <img src="images/insureyou-logo-dark.png" alt="Insureyou Advisory Logo" style="height:80px; max-width:200px;">
+</div>
+
+
+    <!-- Contact Info -->
+    <p>
+      Address: 12/42 King Street, Airport West VIC 3042 (By appointment only)<br>
+      01 2345 6789 | protect@insureyouadvisory.com.au<br>
+      9am to 5pm AEST
+    </p>
+
+    <!-- Disclaimer -->
+    <p style="font-size:0.85rem; margin:20px 0;">
+      Insureyou Advisory (ABN 21 891 330 783) operates under_____________________
+
+A note on advice: We provide General Advice only. This means we give you the education and options you need to make a smart decision, but we don't provide specific recommendations based on your personal financial situation. Everything on this website is for information purposes only.
+Read the PDS:Every insurer we partner with has their own rulebook (the Product Disclosure Statement). Before you sign on the dotted line, please read the PDS to make sure the product actually covers what you need.
+
+    </p>
+    <p style="font-size:0.85rem; margin-bottom:20px;">
+      Each insurer we partner with has its own terms and conditions. Please review the relevant insurer’s Product Disclosure Statement to see if their products meet your needs.
+    </p>
+
+    <!-- Legal Links -->
+    <p>
+      <a href="privacy-policy.html" style="color:#aaa; text-decoration:underline; margin:0 5px;">Privacy Policy</a> |
+      <a href="terms.html" style="color:#aaa; text-decoration:underline; margin:0 5px;">Terms and Conditions</a> |
+      <a href="fsg.html" style="color:#aaa; text-decoration:underline; margin:0 5px;">Financial Services Guide</a> |
+      <a href="pds.html" style="color:#aaa; text-decoration:underline; margin:0 5px;">Product Disclosure Statements</a>
+    </p>
+
+<!-- Social Media -->
+<div style="margin:20px 0;">
+<h3>FOLLOW US</h3><br>
+  <a href="https://www.facebook.com/" target="_blank" style="margin:0 10px;">
+    <img src="images/facebook.png" alt="Facebook" style="width:32px; height:32px;">
+  </a>
+  <a href="https://www.instagram.com/" target="_blank" style="margin:0 10px;">
+    <img src="images/instagram.png" alt="Instagram" style="width:32px; height:32px;">
+  </a>
+  <a href="https://www.linkedin.com/" target="_blank" style="margin:0 10px;">
+    <img src="images/linkedin.png" alt="LinkedIn" style="width:32px; height:32px;">
+  </a>
+</div>
+
+
+    <!-- Copyright -->
+    <p style="margin-top:20px;">© 2026 Insureyou Advisory. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>

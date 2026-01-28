@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Critical Illness Insurance – Insureyou Advisory</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Inter", sans-serif;
+}
+
+body{
+  background:#ffffff;
+  color:#000030;
+  line-height:1.5;
+}
+
+/* NAVBAR */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 80px;
+  border-bottom:1px solid #eee;
+}
+
+.logo img{
+  height:48px;
+}
+
+
+nav a{
+  margin-right:25px;
+  text-decoration:none;
+  color:#000030;
+  font-weight:500;
+}
+
+.btn-main{
+  padding:12px 22px;
+  background: linear-gradient(135deg, #016d61, #0f2c99, #5d2eb5); /* darker teal/blue/purple */
+  color:white;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.btn-main:hover{
+  background: linear-gradient(135deg, #014c49, #0a1c66, #3f1a7f); /* slightly darker on hover */
+}
+
+.section.white-bg {
+  background: #ffffff;
+}
+
+.section.gray-bg {
+  background: #f7f9ff;
+}
+
+/* HERO */
+.hero{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:80px 80px;
+  gap:60px;
+  background:#fff2f4;
+}
+
+.hero-text{
+  max-width:600px;
+}
+
+.hero h1{
+  font-size:42px;
+  margin-bottom:20px;
+}
+
+.hero p{
+  font-size:18px;
+  color:#1a1a4f;
+}
+
+/* CONTENT SECTIONS */
+.section{
+  padding:80px;
+}
+
+.section h2{
+  font-size:32px;
+  margin-bottom:30px;
+  text-align:center;
+}
+
+.section p{
+  max-width:800px;
+  margin:0 auto 20px auto;
+  color:#333;
+  text-align:center;
+}
+
+.benefits-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:30px;
+  margin-top:40px;
+}
+
+.benefit-card{
+  background:#f7f9ff;
+  padding:25px;
+  border-radius:14px;
+  border:1px solid #eee;
+  text-align:center;
+}
+
+/* Gray section full width with left-aligned text */
+.section.gray-bg {
+  background: #f7f9ff;
+  padding: 80px 20px;      /* full width padding */
+}
+
+/* Content wrapper to center the block but keep text left-aligned */
+.section-gray-content {
+  max-width: 900px;         /* limit content width */
+  margin: 0 auto;           /* center block horizontally */
+  text-align: left;         /* left-align text inside */
+}
+
+/* Headings, paragraphs, and lists inside gray section */
+.section-white-content h2 {
+  text-align: center;         /* force all headings, paragraphs, lists left */
+}
+.section-gray-content p,
+.section-gray-content ul {
+  text-align: left;
+}
+
+.section-gray-content ul {
+  padding-left: 100px;       /* proper bullet indent */
+  margin-bottom: 20px;
+}
+
+.section-gray-content p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+
+/* White section content wrapper */
+.section-white-content {
+  max-width: 900px;         /* limit content width */
+  margin: 0 auto;           /* center block horizontally */
+  text-align: left;         /* left-align all text inside */
+}
+
+.section-white-content h2 {
+  text-align: center;         /* force all headings, paragraphs, lists left */
+}
+.section-white-content p,
+.section-white-content ul {
+  text-align: left;         /* force all headings, paragraphs, lists left */
+}
+
+.section-white-content ul {
+  padding-left: 100px;       /* proper bullet indent */
+  margin-bottom: 20px;
+}
+
+.section-white-content p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* CTA */
+.cta{
+  padding:80px;
+  background:linear-gradient(135deg,#02D9C5,#146DFF,#AD89FF);
+  color:white;
+  text-align:center;
+}
+
+.cta h2{
+  font-size:34px;
+  margin-bottom:20px;
+}
+
+/* FOOTER */
+footer{
+  background:#000030;
+  color:#aaa;
+  text-align:center;
+  padding:40px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    <a href="index.html">
+  <img src="images/insureyou-logo.png" alt="Insureyou Advisory Logo">
+</a>
+  </div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="insurances.html">Insurances</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="partners.html">Partners</a>
+    <a href="contact.html" class="btn-main">Get a Quote</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>Critical Illness Insurance</h1>
+    <p>Receive financial support if diagnosed with a serious illness, helping you focus on recovery without financial stress.</p>
+  </div>
+  <div class="hero-image">Hero Image Placeholder</div>
+</section>
+
+<section class="section">
+  <h2>Benefits of TPD Insurance</h2>
+  <div class="benefits-grid">
+    <div class="benefit-card">
+      <h3>Financial Support</h3>
+      <p>Receive a lump sum to cover living expenses and major financial commitments.</p>
+    </div>
+    <div class="benefit-card">
+      <h3>Peace of Mind</h3>
+      <p>Focus on recovery or adjusting to new circumstances knowing finances are covered.</p>
+    </div>
+    <div class="benefit-card">
+      <h3>Mortgage & Debt Coverage</h3>
+      <p>Help pay off outstanding debts or mortgage if unable to work.</p>
+    </div>
+    <div class="benefit-card">
+      <h3>Flexible Options</h3>
+      <p>Choose a policy and coverage amount that fits your lifestyle and needs.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section gray-bg">
+  <div class="section-gray-content">
+    <h2>What Is Critical Illness Insurance?</h2>
+
+    <p>
+      Often called “Trauma Insurance,” Critical Illness Insurance gives you a lump sum if you’re diagnosed with, or suffer from, a serious medical condition like cancer, a heart attack, or stroke—usually with a specified level of severity. Most of Australia’s top insurers cover around 50 conditions.
+    </p>
+
+    <p>
+      These conditions can be life-changing, costly, or both—and sometimes private health insurance or the public system doesn’t cover everything. This could include things like major head injuries, severe burns, coma, or diagnoses such as Multiple Sclerosis, Parkinson’s, Muscular Dystrophy, brain tumours, and more.
+    </p>
+
+    <p>
+      For the full list of conditions covered, our brokers can guide you and help compare options across different insurers, so you can choose the policy that fits your needs.
+    </p>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="section-white-content">
+    <h2>I’ve Got Private Health—Why Do I Still Need Critical Illness Insurance?</h2>
+
+    <p>Private health insurance is great for covering treatment costs, but Critical Illness Insurance works differently—it gives you a lump sum straight into your nominated bank account, usually tax-free, that you can use however you need. That could mean paying for medical and rehab costs, replacing lost income, giving your family time to support you, or covering other related expenses.</p>
+
+    <p>Think of it this way: Private Health Insurance and Critical Illness Insurance work hand-in-hand. One handles the bills, the other gives you flexibility and peace of mind, so you have the funds to get the care and support you need if a serious illness strikes.</p>
+  </div>
+</section>
+
+<footer>
+  <div style="max-width:1200px; margin:0 auto; padding:40px 20px; color:#aaa; text-align:center;">
+    <!-- Logo -->
+    <div style="margin-bottom:20px; text-align:center;">
+  <img src="images/insureyou-logo-dark.png" alt="Insureyou Advisory Logo" style="height:80px; max-width:200px;">
+</div>
+
+
+    <!-- Contact Info -->
+    <p>
+      12/42 King Street, Airport West VIC 3042<br>
+      01 2345 6789 | protect@insureyouadvisory.com.au<br>
+      9am to 5pm AEST
+    </p>
+
+    <!-- Disclaimer -->
+    <p style="font-size:0.85rem; margin:20px 0;">
+      Insureyou Advisory (ABN XX XXX XXX XXX) operates under Insure Solutions Pty Ltd (AFSL XXXXXXX) and can only give general advice about Personal Insurance. This means we provide information to help you make good decisions but cannot give personal advice or recommendations. Everything on this website is general information only.
+    </p>
+    <p style="font-size:0.85rem; margin-bottom:20px;">
+      Each insurer we partner with has its own terms and conditions. Please review the relevant insurer’s Product Disclosure Statement to see if their products meet your needs.
+    </p>
+
+    <!-- Legal Links -->
+    <p>
+      <a href="privacy-policy.html" style="color:#aaa; text-decoration:underline; margin:0 5px;">Privacy Policy</a> |
+      <a href="terms.html" style="color:#aaa; text-decoration:underline; margin:0 5px;">Terms and Conditions</a> |
+      <a href="fsg.html" style="color:#aaa; text-decoration:underline; margin:0 5px;">Financial Services Guide</a> |
+      <a href="pds.html" style="color:#aaa; text-decoration:underline; margin:0 5px;">Product Disclosure Statements</a>
+    </p>
+
+<!-- Social Media -->
+<div style="margin:20px 0;">
+<h3>FOLLOW US</h3><br>
+  <a href="https://www.facebook.com/" target="_blank" style="margin:0 10px;">
+    <img src="images/facebook.png" alt="Facebook" style="width:32px; height:32px;">
+  </a>
+  <a href="https://www.instagram.com/" target="_blank" style="margin:0 10px;">
+    <img src="images/instagram.png" alt="Instagram" style="width:32px; height:32px;">
+  </a>
+  <a href="https://www.linkedin.com/" target="_blank" style="margin:0 10px;">
+    <img src="images/linkedin.png" alt="LinkedIn" style="width:32px; height:32px;">
+  </a>
+</div>
+
+
+    <!-- Copyright -->
+    <p style="margin-top:20px;">© 2026 Insureyou Advisory. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

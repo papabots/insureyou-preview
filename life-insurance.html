@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Life Insurance – Insureyou Advisory</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Inter", sans-serif;
+}
+
+body{
+  background:#ffffff;
+  color:#000030;
+  line-height:1.5;
+}
+
+/* NAVBAR */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 80px;
+  border-bottom:1px solid #eee;
+}
+
+.logo img{
+  height:48px;
+}
+
+
+nav a{
+  margin-right:25px;
+  text-decoration:none;
+  color:#000030;
+  font-weight:500;
+}
+
+.btn-main{
+  padding:12px 22px;
+  background: linear-gradient(135deg, #016d61, #0f2c99, #5d2eb5); /* darker teal/blue/purple */
+  color:white;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.btn-main:hover{
+  background: linear-gradient(135deg, #014c49, #0a1c66, #3f1a7f); /* slightly darker on hover */
+}
+
+.section.white-bg {
+  background: #ffffff;
+}
+
+.section.gray-bg {
+  background: #f7f9ff;
+}
+
+
+/* HERO */
+.hero{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:80px 80px;
+  gap:60px;
+  background:#f2f4ff;
+}
+
+.hero-text{
+  max-width:600px;
+}
+
+.hero h1{
+  font-size:42px;
+  margin-bottom:20px;
+}
+
+.hero p{
+  font-size:18px;
+  color:#1a1a4f;
+}
+
+/* CONTENT SECTIONS */
+.section{
+  padding:80px;
+}
+
+.section h2{
+  font-size:32px;
+  margin-bottom:30px;
+  text-align:center;
+}
+
+.section p{
+  max-width:800px;
+  margin:0 auto 20px auto;
+  color:#333;
+  text-align:center;
+}
+
+.benefits-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:30px;
+  margin-top:40px;
+}
+
+.benefit-card{
+  background:#f7f9ff;
+  padding:25px;
+  border-radius:14px;
+  border:1px solid #eee;
+  text-align:center;
+}
+
+/* CTA */
+.cta{
+  padding:80px;
+  background:linear-gradient(135deg,#02D9C5,#146DFF,#AD89FF);
+  color:white;
+  text-align:center;
+}
+
+.cta h2{
+  font-size:34px;
+  margin-bottom:20px;
+}
+
+/* FOOTER */
+footer{
+  background:#000030;
+  color:#aaa;
+  text-align:center;
+  padding:40px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    <a href="index.html">
+  <img src="images/insureyou-logo.png" alt="Insureyou Advisory Logo">
+</a>
+  </div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="insurances.html">Insurances</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="partners.html">Partners</a>
+    <a href="contact.html" class="btn-main">Get a Quote</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>Life Insurance</h1>
+
+    <p>
+      Make sure your family is looked after, no matter what. Life Insurance provides a financial safety net if you pass away or are diagnosed with a terminal illness, so your loved ones aren't left dealing with debts and bills on their own.
+    </p>
+
+    <div style="margin:30px 0;">
+      <a href="contact.html" class="btn-main">Book a Call</a>
+    </div>
+
+    <p style="font-size:16px; color:#444;">
+      Let’s have a quick chat. 15 minutes. Free advice. Zero pressure.
+    </p>
+  </div>
+
+  <div class="hero-image">Hero Image Placeholder</div>
+</section>
+
+
+<section class="section" style="background:#ffffff; padding:60px 20px; text-align:center;">
+  <h2>If your health takes a hit, make sure your finances don't.</h2>
+
+  <p style="max-width:800px; margin:0 auto 50px auto; color:#333;">
+    We help you access top-tier cover from Australia’s leading insurers, translating the fine print so you know exactly what you're signing up for.
+  </p>
+
+  <div style="
+    display:flex;
+    gap:30px;
+    justify-content:center;
+    align-items:stretch;
+    flex-wrap:wrap;
+    max-width:1100px;
+    margin:0 auto;
+  ">
+
+    <div style="
+      flex:1;
+      min-width:280px;
+      background:#f7f9ff;
+      padding:30px;
+      border-radius:12px;
+      text-align:left;
+    ">
+      <center><h3>1. Expert match-making</h3><br></center>
+      <p>
+        Not all insurers are the same. We know which ones work best for your unique situation and medical history, ensuring you get a policy that actually covers you.
+      </p>
+    </div>
+
+    <div style="
+      flex:1;
+      min-width:280px;
+      background:#f7f9ff;
+      padding:30px;
+      border-radius:12px;
+      text-align:left;
+    ">
+      <center><h3>2. Stress-free setup</h3><br></center>
+      <p>
+        Protecting your future shouldn't be a headache. We handle the paperwork and guide you through the options, so you can make a smart decision without the stress.
+      </p>
+    </div>
+
+    <div style="
+      flex:1;
+      min-width:280px;
+      background:#f7f9ff;
+      padding:30px;
+      border-radius:12px;
+      text-align:left;
+    ">
+      <center><h3>3. In your corner</h3><br></center>
+      <p>
+        We don't just set you up and disappear. Whether you need to update your cover, review your policy, or make a claim, we’re here to help every step of the way.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+
+<section class="section gray-bg">
+  <h2>What actually is Life Insurance?</h2>
+  <p><b>At its core, Life Insurance is a financial safety net. If you pass away or are diagnosed with a terminal illness, it ensures your family isn't left with a mountain of debt or bills they can't pay.</b></p>
+
+<p><b>How it works</b></p>
+<p>It’s pretty straightforward: you choose a coverage amount (the "benefit") and pay a monthly premium. In exchange, if the worst happens, the insurer pays that money to your loved ones—usually as a tax-free lump sum cash payment.<p>
+
+<p><b>A note on the name</b></p>
+<p>Technically, the industry calls this "Death Cover." However, the term "Life Insurance" is often used as a catch-all phrase to describe the whole suite of personal protections, including Total & Permanent Disability (TPD), Trauma (Critical Illness), and Income Protection.</p>
+</section>
+
+<section class="section">
+  <h2>Is it actually necessary?</h2>
+  <p><b>Think of Life Insurance as the ultimate backup plan.</b></p>
+
+<p>If your income stopped forever tomorrow, how long would your family be okay? Life Insurance ensures that even if the worst happens, your loved ones can keep the roof over their heads and maintain the life you’ve built for them.</p>
+
+<p>While it isn't legally required (like car registration), for most families, the peace of mind is non-negotiable. The trick is finding the sweet spot: enough cover to keep your family safe, without blowing your monthly budget. That is exactly where we help.</p>
+</section>
+
+<section style="background:#f7f9ff; padding:60px 20px; width:100%;">
+  
+  <div style="max-width:900px; margin:0 auto; text-align:center;">
+    
+    <h2>Need a hand figuring this out?</h2>
+
+    <p style="margin-top:20px; font-size:18px;">
+      There is a big difference between <b>"having insurance"</b> and <b>"being properly insured."</b>
+    </p>
+
+    <p style="margin-top:15px;">
+      The way you structure your policy impacts everything from your tax bill to how fast your family gets paid.
+      It’s not just about picking a number; it’s about setting it up correctly.
+    </p>
+
+    <p style="margin-top:15px;">
+      Whether you’re single, raising a busy family, or looking toward retirement, we help you navigate the options
+      to find a policy that fits your life perfectly (and reduces the stress for everyone else).
+    </p>
+
+    <p style="margin-top:25px; font-weight:600;">
+      Ready to see your options? Contact us today.
+    </p>
+
+    <div style="margin-top:25px;">
+      <a href="contact.html" class="btn-main">Get a Quote</a>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="section white-bg">
+  <h2>Why choose us?</h2>
+  <p><b>Expertise without the headache</b></p>
+  <p>Researching insurance is complicated and time-consuming. We cut through the noise, giving you a dedicated expert to guide you to the best options from Australia's top insurers. No call centers, just real advice.</p>
+
+<p><b>We fight for your claim</b></p>
+<p>This is the part that matters most. If you ever need to claim, we don't just hand you a form and wish you luck. We act as your advocate, managing the insurer and the paperwork to ensure you get paid quickly and fairly.<p>
+
+<p><b>Cover that actually fits</b></p>
+<p>You aren't a statistic. We tailor your policy to match your specific health, budget, and lifestyle. Plus, we check in regularly to make sure your cover evolves as your life changes, so you’re never paying for things you don't need.</p>
+
+<p><b>The full safety net</b></p>
+<p>We look at the big picture. From Life Cover to Income Protection and TPD, we give you access to the full range of products to build a safety net that covers you from every angle.</p>
+</section>
+
+<section style="background:#f7f9ff; padding:70px 20px; width:100%;">
+
+  <div style="max-width:1100px; margin:0 auto;">
+
+    <h2 style="text-align:center; margin-bottom:50px;">
+      The 4 ways we protect you
+    </h2>
+
+    <!-- GRID -->
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:30px;">
+
+      <!-- Life Insurance -->
+      <div style="padding:30px; border:1px solid #e5e7eb; border-radius:10px;">
+        <h3>Life Insurance</h3>
+        <p>
+          The ultimate safety net for your family. This pays a lump sum if you pass away or are diagnosed with a
+          terminal illness, ensuring your loved ones aren't left with debts they can't handle.
+        </p>
+        <ul>
+          <li><b>Smart payment options:</b> You can pay via your Super fund to save cash flow.</li>
+          <li><b>Tax-free:</b> Generally tax-free if paid to a dependent (like your spouse).</li>
+          <li><b>Immediate help:</b> Includes an advance “funeral benefit” to cover immediate costs.</li>
+        </ul>
+      </div>
+
+      <!-- TPD -->
+      <div style="padding:30px; border:1px solid #e5e7eb; border-radius:10px;">
+        <h3>Total &amp; Permanent Disability (TPD)</h3>
+        <p>
+          Protection if you can never work again. If an illness or injury stops you from returning to the workforce
+          permanently, this pays a lump sum to replace your future income.
+        </p>
+        <ul>
+          <li><b>Adapt your life:</b> Pay off the mortgage, modify your home, or fund long-term care.</li>
+          <li><b>Flexible cover:</b> “Own Occupation” or “Any Occupation” options available.</li>
+          <li><b>Super friendly:</b> Often payable through your Super.</li>
+        </ul>
+      </div>
+
+      <!-- Income Protection -->
+      <div style="padding:30px; border:1px solid #e5e7eb; border-radius:10px;">
+        <h3>Income Protection</h3>
+        <p>
+          Your salary, continued. If you can’t work for a while due to sickness or injury, this provides monthly
+          payments of up to 70% of your income.
+        </p>
+        <ul>
+          <li><b>Keep the lights on:</b> Covers bills and everyday living expenses.</li>
+          <li><b>You control the terms:</b> Choose the waiting period and benefit length.</li>
+          <li><b>Tax perks:</b> Premiums are usually 100% tax-deductible if paid personally.</li>
+        </ul>
+      </div>
+
+      <!-- Trauma -->
+      <div style="padding:30px; border:1px solid #e5e7eb; border-radius:10px;">
+        <h3>Trauma (Critical Illness) Cover</h3>
+        <p>
+          Cash to help you fight. A lump sum payout if you’re diagnosed with a major medical event like cancer,
+          heart attack, or stroke.
+        </p>
+        <ul>
+          <li><b>Focus on recovery:</b> Use funds for treatment, rehab, or time off work.</li>
+          <li><b>Protect the kids:</b> Available as Child Cover.</li>
+          <li><b>Tax-free:</b> Benefits are generally tax-free.</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section style="background:#ffffff; padding:80px 20px; width:100%;">
+
+  <div style="max-width:1100px; margin:0 auto; text-align:center;">
+
+    <h2>Getting covered is easier than you think</h2>
+
+    <div style="margin:20px 0 50px;">
+      <a href="contact.html" class="btn-main">Request a Quote</a>
+    </div>
+
+    <!-- STEPS GRID -->
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:30px; text-align:left;">
+
+      <!-- Step 1 -->
+      <div style="background:#ffffff; padding:30px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.05);">
+        <h3>1. We do the legwork</h3>
+        <p>
+          Skip the hours of research. We chat about your life, then scan the market to find the best policy for your
+          budget. We’ll even review your current cover to see if we can beat it.
+        </p>
+      </div>
+
+      <!-- Step 2 -->
+      <div style="background:#ffffff; padding:30px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.05);">
+        <h3>2. We handle the paperwork</h3>
+        <p>
+          Once you pick a policy, we guide you through the application. We handle the forms and admin to make sure
+          everything is accurate and you aren't bogged down in red tape.
+        </p>
+      </div>
+
+      <!-- Step 3 -->
+      <div style="background:#ffffff; padding:30px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.05);">
+        <h3>3. We get you approved</h3>
+        <p>
+          We deal with the insurer directly, negotiating on your behalf to secure the best possible terms and get
+          your policy active as fast as possible.
+        </p>
+      </div>
+
+      <!-- Step 4 -->
+      <div style="background:#ffffff; padding:30px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.05);">
+        <h3>4. We’re here for the long haul</h3>
+        <p>
+          We don’t disappear once you're signed up. If you ever need to claim, we advocate for you. Once approved,
+          funds are usually in your account within 5–10 business days.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section style="background:#f7f9ff; padding:80px 20px; width:100%;">
+
+  <div style="max-width:1000px; margin:0 auto; text-align:center;">
+
+    <h2>Already have cover? We’re here to help.</h2>
+
+    <h3 style="margin-top:10px;">Manage Your Policy</h3>
+
+    <p style="max-width:750px; margin:20px auto 40px; line-height:1.6;">
+      Life changes, and your insurance should too. Whether you need to update your
+      beneficiaries, adjust your cover, or just check your premiums, give us a call —
+      we’ll handle the paperwork for you.
+    </p>
+
+<div>    
+<a href="tel:+61XXXXXXXXX" class="btn-main">Call Us Now</a>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section style="background:#ffffff; padding:80px 20px; width:100%;">
+
+  <div style="max-width:1000px; margin:0 auto; text-align:center;">
+
+    <h2>Make A Claim</h2>
+
+    <p style="max-width:780px; margin:20px auto 40px; line-height:1.6;">
+      This is the moment that matters most. If you need to claim, don't stress about
+      the forms. We advocate for you, managing the entire process from start to finish
+      to ensure you get paid quickly and fairly.
+    </p>
+
+<div>    
+<a href="claims-process.html" class="btn-main">
+      Make a Claim
+</a>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section style="background:#f7f9ff; padding:80px 20px; width:100%;">
+  <div style="max-width:1000px; margin:0 auto; text-align:left;">
+
+    <h2 style="text-align:center; margin-bottom:40px;">So, what does it actually cost?</h2>
+
+    <p style="margin-bottom:20px;">
+      Estimated annual cost for <b>$1 million Life Cover</b>
+    </p>
+
+    <p style="font-size:0.9rem; color:#555; margin-bottom:30px;">
+      Important: These estimates are a guide only and do not take into account your unique medical history, occupation, or any discounts you may be eligible for.*
+    </p>
+
+    <table style="width:100%; border-collapse:collapse; margin-bottom:40px; text-align:center;">
+      <thead>
+        <tr style="background:#e0e7ff;">
+          <th style="padding:12px; border:1px solid #ccc;">Age</th>
+          <th style="padding:12px; border:1px solid #ccc;">Female</th>
+          <th style="padding:12px; border:1px solid #ccc;">Male</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding:12px; border:1px solid #ccc;">25</td>
+          <td style="padding:12px; border:1px solid #ccc;">$234</td>
+          <td style="padding:12px; border:1px solid #ccc;">$378</td>
+        </tr>
+        <tr>
+          <td style="padding:12px; border:1px solid #ccc;">30</td>
+          <td style="padding:12px; border:1px solid #ccc;">$233</td>
+          <td style="padding:12px; border:1px solid #ccc;">$304</td>
+        </tr>
+        <tr>
+          <td style="padding:12px; border:1px solid #ccc;">40</td>
+          <td style="padding:12px; border:1px solid #ccc;">$306</td>
+          <td style="padding:12px; border:1px solid #ccc;">$361</td>
+        </tr>
+        <tr>
+          <td style="padding:12px; border:1px solid #ccc;">50</td>
+          <td style="padding:12px; border:1px solid #ccc;">$629</td>
+          <td style="padding:12px; border:1px solid #ccc;">$916</td>
+        </tr>
+        <tr>
+          <td style="padding:12px; border:1px solid #ccc;">60</td>
+          <td style="padding:12px; border:1px solid #ccc;">$2,504</td>
+          <td style="padding:12px; border:1px solid #ccc;">$3,847</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p style="margin-bottom:20px;">
+      It’s the number one question we get. Because your life is unique, there is no single "sticker price" for insurance.
+    </p>
+
+    <p style="margin-bottom:20px;">
+      Your premium is calculated based on a specific mix of:
+      <ul style="margin-left:20px; margin-top:10px;">
+        <li><b>Who you are:</b> Your age, gender, and medical history.</li>
+        <li><b>What you do:</b> Your occupation and lifestyle (e.g., whether you smoke).</li>
+        <li><b>What you need:</b> The amount of cover you want and the quality of the policy.</li>
+      </ul>
+    </p>
+
+    <p style="margin-bottom:20px;">
+      <b>Structuring it your way:</b> There are smart ways to manage the cost. For example, owning and paying for your policy through your Superannuation can save your monthly cash flow and may offer tax advantages.
+    </p>
+
+    <p>
+      <b>Get a real number:</b> The only way to know for sure is to run the numbers. We can give you a quick, no-obligation comparison of the market to show you exactly what it would cost for your specific situation.
+    </p>
+
+  </div>
+</section>
+
+
+
+<section class="cta">
+  <h2>Get Your Life Insurance Quote Today</h2>
+  <a href="contact.html" class="btn-main">Request a Quote</a>
+</section>
+
+<footer>
+  <div style="max-width:1200px; margin:0 auto; padding:40px 20px; color:#aaa; text-align:center;">
+    <!-- Logo -->
+    <div style="margin-bottom:20px; text-align:center;">
+  <img src="images/insureyou-logo-dark.png" alt="Insureyou Advisory Logo" style="height:80px; max-width:200px;">
+</div>
+
+
+    <!-- Contact Info -->
+    <p>
+      12/42 King Street, Airport West VIC 3042<br>
+      01 2345 6789 | protect@insureyouadvisory.com.au<br>
+      9am to 5pm AEST
+    </p>
+
+    <!-- Disclaimer -->
+    <p style="font-size:0.85rem; margin:20px 0;">
+      Insureyou Advisory (ABN XX XXX XXX XXX) operates under Insure Solutions Pty Ltd (AFSL XXXXXXX) and can only give general advice about Personal Insurance. This means we provide information to help you make good decisions but cannot give personal advice or recommendations. Everything on this website is general information only.
+    </p>
+    <p style="font-size:0.85rem; margin-bottom:20px;">
+      Each insurer we partner with has its own terms and conditions. Please review the relevant insurer’s Product Disclosure Statement to see if their products meet your needs.
+    </p>
+
+    <!-- Legal Links -->
+    <p>
+      <a href="privacy-policy.html" style="color:#aaa; text-decoration:underline; margin:0 5px;">Privacy Policy</a> |
+      <a href="terms.html" style="color:#aaa; text-decoration:underline; margin:0 5px;">Terms and Conditions</a> |
+      <a href="fsg.html" style="color:#aaa; text-decoration:underline; margin:0 5px;">Financial Services Guide</a> |
+      <a href="pds.html" style="color:#aaa; text-decoration:underline; margin:0 5px;">Product Disclosure Statements</a>
+    </p>
+
+<!-- Social Media -->
+<div style="margin:20px 0;">
+<h3>FOLLOW US</h3><br>
+  <a href="https://www.facebook.com/" target="_blank" style="margin:0 10px;">
+    <img src="images/facebook.png" alt="Facebook" style="width:32px; height:32px;">
+  </a>
+  <a href="https://www.instagram.com/" target="_blank" style="margin:0 10px;">
+    <img src="images/instagram.png" alt="Instagram" style="width:32px; height:32px;">
+  </a>
+  <a href="https://www.linkedin.com/" target="_blank" style="margin:0 10px;">
+    <img src="images/linkedin.png" alt="LinkedIn" style="width:32px; height:32px;">
+  </a>
+</div>
+
+
+    <!-- Copyright -->
+    <p style="margin-top:20px;">© 2026 Insureyou Advisory. All rights reserved.</p>
+  </div>
+</footer>
+
+
+</body>
+</html>
