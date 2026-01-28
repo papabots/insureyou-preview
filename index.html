@@ -364,12 +364,111 @@ nav a{
 }
 
 /* FOOTER */
-footer{
-  background:#000030;
-  color:#aaa;
-  text-align:center;
-  padding:40px;
+footer {
+  background: #000030;
+  color: #aaa;
+  font-family: "Inter", sans-serif;
+  padding: 60px 20px 20px;
 }
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Top section */
+.footer-top {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.footer-top .footer-logo img {
+  height: 80px;
+  max-width: 200px;
+  margin-bottom: 15px;
+}
+
+.footer-description {
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Middle section: 3 columns centered */
+.footer-middle {
+  display: flex;
+  justify-content: center; /* centers all columns horizontally */
+  gap: 60px; /* space between columns */
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.footer-middle div {
+  flex: 0 1 200px; /* fixed min width but allows wrapping */
+  text-align: left; /* center content inside each column */
+}
+
+
+
+.footer-links h4,
+.footer-contact h4,
+.footer-social h4 {
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.footer-links a {
+  display: block;
+  color: #aaa;
+  text-decoration: none;
+  margin-bottom: 8px;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #02D9C5;
+}
+
+.footer-contact p {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.footer-social .social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.footer-social .social-icons img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Bottom section */
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #222;
+  padding-top: 20px;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-middle {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-middle div {
+    margin-bottom: 25px;
+  }
+}
+
 
 /* Responsive */
 @media(max-width:900px){
@@ -671,62 +770,179 @@ footer{
 
 
 <!-- FAQ SECTION -->
-<section class="faq" style="background:#ffffff; padding:60px 20px;">
-  <div class="container" style="max-width:1000px; margin:0 auto;">
-    <h2 style="text-align:center; font-size:32px; color:#146DFF; margin-bottom:40px;">FAQ</h2>
+<section style="background:#ffffff; padding:80px 20px; width:100%;">
+  <div style="max-width:1000px; margin:0 auto;">
 
-    <div class="faq-card" style="background:white; padding:25px; border-radius:12px; margin-bottom:20px; box-shadow:0 4px 8px rgba(0,0,0,0.05);">
-      <h3>Do I actually need personal insurance?</h3>
-      <p>If you are financially independent, the answer is usually yes. Ask yourself these four questions:</p>
-      <ul>
-        <li><b>Income Protection:</b> Could I pay rent and buy food if I couldn't work for 6 months?</li>
-        <li><b>Life Insurance:</b> Would my family be financially okay if I wasn't around tomorrow?</li>
-        <li><b>Disability:</b> Could I afford to retire today if an injury stopped me from ever working again?</li>
-        <li><b>Trauma:</b> Could I afford huge medical bills and time off work to fight cancer or a heart attack?</li>
-      </ul>
+    <h2 style="text-align:center; font-size:32px; color:#146DFF; margin-bottom:50px;">
+      Frequently Asked Questions
+    </h2>
+
+    <!-- FAQ ITEM -->
+    <div class="faq-item">
+      <button class="faq-question">
+        Do I actually need personal insurance?
+        <span>+</span>
+      </button>
+      <div class="faq-answer">
+        <p>If you are financially independent, the answer is usually yes. Ask yourself:</p>
+        <ul>
+          <li><b>Income Protection:</b> Could I pay rent and buy food if I couldn’t work for 6 months?</li>
+          <li><b>Life Insurance:</b> Would my family be okay if I wasn’t around tomorrow?</li>
+          <li><b>Disability:</b> Could I afford to retire today if I could never work again?</li>
+          <li><b>Trauma:</b> Could I afford treatment and time off work for a major illness?</li>
+        </ul>
+      </div>
     </div>
 
-    <div class="faq-card" style="background:white; padding:25px; border-radius:12px; margin-bottom:20px; box-shadow:0 4px 8px rgba(0,0,0,0.05);">
-      <h3>How much cover do I need?</h3>
-      <p>There is no "one size fits all." It depends on your debts, family situation, and lifestyle. We help you run the numbers so you are fully covered for the worst-case scenario without paying for fluff you don't need.</p>
+    <div class="faq-item">
+      <button class="faq-question">
+        How much cover do I need?
+        <span>+</span>
+      </button>
+      <div class="faq-answer">
+        <p>
+          There is no one-size-fits-all answer. It depends on your debts, family situation,
+          and lifestyle. We help you run the numbers so you are fully protected without
+          paying for cover you don’t need.
+        </p>
+      </div>
     </div>
 
-    <div class="faq-card" style="background:white; padding:25px; border-radius:12px; margin-bottom:20px; box-shadow:0 4px 8px rgba(0,0,0,0.05);">
-      <h3>How much does it cost?</h3>
-      <p>It depends on your age, health, job, and the cover you choose. After a 10-minute chat, we can scan the market to find you the best value. Using us doesn't cost you a cent extra; insurers pay us.</p>
+    <div class="faq-item">
+      <button class="faq-question">
+        How much does it cost?
+        <span>+</span>
+      </button>
+      <div class="faq-answer">
+        <p>
+          Cost depends on your age, health, occupation, and cover levels. After a quick
+          10-minute chat, we scan the market to find the best value. Using us doesn’t cost
+          you anything extra — insurers pay us.
+        </p>
+      </div>
     </div>
 
-    <div class="faq-card" style="background:white; padding:25px; border-radius:12px; margin-bottom:20px; box-shadow:0 4px 8px rgba(0,0,0,0.05);">
-      <h3>How do I know I’m getting the best price?</h3>
-      <p>We compare 10 of Australia’s top insurers, covering ~91% of the quality market. We find the "sweet spot"—affordable, reliable policies without unnecessary exclusions.</p>
+    <div class="faq-item">
+      <button class="faq-question">
+        How do I know I’m getting the best price?
+        <span>+</span>
+      </button>
+      <div class="faq-answer">
+        <p>
+          We compare 10 of Australia’s top insurers, covering around 91% of the quality
+          market. Our goal is the sweet spot: strong protection without unnecessary
+          exclusions or inflated premiums.
+        </p>
+      </div>
     </div>
 
-    <div class="faq-card" style="background:white; padding:25px; border-radius:12px; margin-bottom:20px; box-shadow:0 4px 8px rgba(0,0,0,0.05);">
-      <h3>Can I pay via my Super fund?</h3>
-      <p>Yes. You can pay for Life, TPD, and Income Protection through Super.</p>
-      <ul>
-        <li><b>Pro:</b> Saves your monthly cash flow and often gives a 15% tax rebate.</li>
-        <li><b>Con:</b> Reduces retirement savings (can be topped up manually). We help weigh the pros & cons.</li>
-      </ul>
+    <div class="faq-item">
+      <button class="faq-question">
+        Can I pay via my Super fund?
+        <span>+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Yes. Life, TPD, and Income Protection can often be paid through Super.</p>
+        <ul>
+          <li><b>Pro:</b> Improves cash flow and may provide tax benefits.</li>
+          <li><b>Con:</b> Reduces retirement savings (which can be topped up).</li>
+        </ul>
+        <p>We help you weigh up whether this makes sense for you.</p>
+      </div>
     </div>
 
-    <div class="faq-card" style="background:white; padding:25px; border-radius:12px; margin-bottom:20px; box-shadow:0 4px 8px rgba(0,0,0,0.05);">
-      <h3>I already have insurance in my Super—isn't that enough?</h3>
-      <p>Default Super cover is generic and not medically underwritten upfront. We set up tailored policies so you know exactly where you stand.</p>
+    <div class="faq-item">
+      <button class="faq-question">
+        I already have insurance in my Super — isn’t that enough?
+        <span>+</span>
+      </button>
+      <div class="faq-answer">
+        <p>
+          Default Super cover is generic and often not medically underwritten upfront.
+          We set up tailored policies so you know exactly what is covered — and what isn’t.
+        </p>
+      </div>
     </div>
 
-    <div class="faq-card" style="background:white; padding:25px; border-radius:12px; margin-bottom:20px; box-shadow:0 4px 8px rgba(0,0,0,0.05);">
-      <h3>Why use us instead of going directly?</h3>
-      <p>Three reasons: Quality, Clarity, and Claims.</p>
-      <ul>
-        <li><b>Quality:</b> Premium policies with better protection.</li>
-        <li><b>Clarity:</b> Policies tailored to you, not generic products.</li>
-        <li><b>Claims:</b> Higher payout rates when a specialist manages the claim. And it's free for you!</li>
-      </ul>
+    <div class="faq-item">
+      <button class="faq-question">
+        Why use us instead of going direct?
+        <span>+</span>
+      </button>
+      <div class="faq-answer">
+        <p><b>Three reasons: Quality, Clarity, and Claims.</b></p>
+        <ul>
+          <li><b>Quality:</b> Access to better policy definitions.</li>
+          <li><b>Clarity:</b> Advice in plain English, tailored to you.</li>
+          <li><b>Claims:</b> Higher success rates when a specialist manages the claim.</li>
+        </ul>
+        <p>And it doesn’t cost you a cent.</p>
+      </div>
     </div>
 
   </div>
 </section>
+
+<style>
+  .faq-item {
+    background:#ffffff;
+    border-radius:14px;
+    margin-bottom:18px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    overflow:hidden;
+  }
+
+  .faq-question {
+    width:100%;
+    background:none;
+    border:none;
+    padding:22px 26px;
+    font-size:18px;
+    font-weight:600;
+    text-align:left;
+    cursor:pointer;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:#000030;
+  }
+
+  .faq-question span {
+    font-size:24px;
+    transition:0.3s;
+  }
+
+  .faq-answer {
+    max-height:0;
+    overflow:hidden;
+    transition:max-height 0.45s ease;
+    padding:0 26px;
+  }
+
+  .faq-answer p,
+  .faq-answer ul {
+    padding-bottom:18px;
+    color:#333;
+    line-height:1.7;
+  }
+
+  .faq-item.active .faq-answer {
+    max-height:600px;
+  }
+
+  .faq-item.active .faq-question span {
+    transform:rotate(45deg);
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.parentElement.classList.toggle('active');
+    });
+  });
+</script>
+
 
 
 <!-- READY TO CHAT CTA -->
@@ -760,58 +976,57 @@ footer{
 </section>
 
 <footer>
-  <div style="max-width:1200px; margin:0 auto; padding:40px 20px; color:#aaa; text-align:center;">
-    <!-- Logo -->
-    <div style="margin-bottom:20px; text-align:center;">
-  <img src="images/insureyou-logo-dark.png" alt="Insureyou Advisory Logo" style="height:80px; max-width:200px;">
-</div>
+  <div class="footer-container">
 
+    <!-- Top: Logo & Brief -->
+    <div class="footer-top">
+      <div class="footer-logo">
+        <img src="images/insureyou-logo-dark.png" alt="Insureyou Advisory Logo">
+      </div>
+      <p class="footer-description">
+        Insureyou Advisory (ABN 21 891 330 783) operates under general advice only. We provide education and options to help you make informed decisions, but cannot give personal advice. All information on this website is for general purposes only.
+      </p>
+    </div>
 
-    <!-- Contact Info -->
-    <p>
-      Address: 12/42 King Street, Airport West VIC 3042 (By appointment only)<br>
-      01 2345 6789 | protect@insureyouadvisory.com.au<br>
-      9am to 5pm AEST
-    </p>
+    <!-- Middle: Links & Contact Info -->
+    <div class="footer-middle">
 
-    <!-- Disclaimer -->
-    <p style="font-size:0.85rem; margin:20px 0;">
-      Insureyou Advisory (ABN 21 891 330 783) operates under_____________________
+      <!-- Links -->
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
+        <a href="fsg.html">Financial Services Guide</a>
+        <a href="pds.html">Product Disclosure Statements</a>
+      </div>
 
-A note on advice: We provide General Advice only. This means we give you the education and options you need to make a smart decision, but we don't provide specific recommendations based on your personal financial situation. Everything on this website is for information purposes only.
-Read the PDS:Every insurer we partner with has their own rulebook (the Product Disclosure Statement). Before you sign on the dotted line, please read the PDS to make sure the product actually covers what you need.
+      <!-- Contact -->
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>12/42 King Street, Airport West VIC 3042 (By appointment only)</p>
+        <p>01 2345 6789 | protect@insureyouadvisory.com.au</p>
+        <p>Mon-Fri 9am to 5pm AEST</p>
+      </div>
 
-    </p>
-    <p style="font-size:0.85rem; margin-bottom:20px;">
-      Each insurer we partner with has its own terms and conditions. Please review the relevant insurer’s Product Disclosure Statement to see if their products meet your needs.
-    </p>
+      <!-- Social -->
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
+          <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
+          <a href="https://www.linkedin.com/" target="_blank"><img src="images/linkedin.png" alt="LinkedIn"></a>
+        </div>
+      </div>
 
-    <!-- Legal Links -->
-    <p>
-      <a href="privacy-policy.html" style="color:#aaa; text-decoration:underline; margin:0 5px;">Privacy Policy</a> |
-      <a href="terms.html" style="color:#aaa; text-decoration:underline; margin:0 5px;">Terms and Conditions</a> |
-      <a href="fsg.html" style="color:#aaa; text-decoration:underline; margin:0 5px;">Financial Services Guide</a> |
-      <a href="pds.html" style="color:#aaa; text-decoration:underline; margin:0 5px;">Product Disclosure Statements</a>
-    </p>
+    </div>
 
-<!-- Social Media -->
-<div style="margin:20px 0;">
-<h3>FOLLOW US</h3><br>
-  <a href="https://www.facebook.com/" target="_blank" style="margin:0 10px;">
-    <img src="images/facebook.png" alt="Facebook" style="width:32px; height:32px;">
-  </a>
-  <a href="https://www.instagram.com/" target="_blank" style="margin:0 10px;">
-    <img src="images/instagram.png" alt="Instagram" style="width:32px; height:32px;">
-  </a>
-  <a href="https://www.linkedin.com/" target="_blank" style="margin:0 10px;">
-    <img src="images/linkedin.png" alt="LinkedIn" style="width:32px; height:32px;">
-  </a>
-</div>
+    <!-- Bottom: Copyright -->
+    <div class="footer-bottom">
+      <p>© 2026 Insureyou Advisory. All rights reserved.</p>
+    </div>
 
-
-    <!-- Copyright -->
-    <p style="margin-top:20px;">© 2026 Insureyou Advisory. All rights reserved.</p>
   </div>
 </footer>
+
 </body>
 </html>
