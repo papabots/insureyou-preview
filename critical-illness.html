@@ -179,6 +179,60 @@ nav a{
   line-height: 1.6;
 }
 
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown button */
+.dropbtn {
+  text-decoration: none;
+  color: #000030;
+  font-weight: 500;
+  padding: 0;
+  margin-right: 25px;
+  cursor: pointer;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 200px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1000;
+  border-radius: 8px;
+  padding: 10px 0;
+}
+
+/* Individual links inside dropdown */
+.dropdown-content a {
+  color: #000030;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: block;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.dropdown-content a:hover {
+  background-color: #f2f2f2;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Optional: add little arrow */
+.dropbtn::after {
+  content: " ▼";
+  font-size: 0.7em;
+  margin-left: 5px;
+}
+
 /* CTA */
 .cta{
   padding:80px;
@@ -193,12 +247,111 @@ nav a{
 }
 
 /* FOOTER */
-footer{
-  background:#000030;
-  color:#aaa;
-  text-align:center;
-  padding:40px;
+footer {
+  background: #000030;
+  color: #aaa;
+  font-family: "Inter", sans-serif;
+  padding: 60px 20px 20px;
 }
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Top section */
+.footer-top {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.footer-top .footer-logo img {
+  height: 80px;
+  max-width: 200px;
+  margin-bottom: 15px;
+}
+
+.footer-description {
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Middle section: 3 columns centered */
+.footer-middle {
+  display: flex;
+  justify-content: center; /* centers all columns horizontally */
+  gap: 60px; /* space between columns */
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.footer-middle div {
+  flex: 0 1 200px; /* fixed min width but allows wrapping */
+  text-align: left; /* center content inside each column */
+}
+
+
+
+.footer-links h4,
+.footer-contact h4,
+.footer-social h4 {
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.footer-links a {
+  display: block;
+  color: #aaa;
+  text-decoration: none;
+  margin-bottom: 8px;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #02D9C5;
+}
+
+.footer-contact p {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.footer-social .social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.footer-social .social-icons img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Bottom section */
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #222;
+  padding-top: 20px;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-middle {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-middle div {
+    margin-bottom: 25px;
+  }
+}
+
 </style>
 </head>
 
@@ -207,127 +360,418 @@ footer{
 <header>
   <div class="logo">
     <a href="index.html">
-  <img src="images/insureyou-logo.png" alt="Insureyou Advisory Logo">
-</a>
+      <img src="images/insureyou-logo.png" alt="Insureyou Advisory Logo">
+    </a>
   </div>
 
   <nav>
-    <a href="index.html">Home</a>
-    <a href="insurances.html">Insurances</a>
     <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
+    <!-- Dropdown for Insurances -->
+    <div class="dropdown">
+      <a href="#" class="dropbtn">Insurances</a>
+      <div class="dropdown-content">
+        <a href="life-insurance.html">Life Insurance</a>
+        <a href="income-protection.html">Income Protection</a>
+        <a href="tpd-insurance.html">Total & Permanent Disability</a>
+        <a href="critical-illness.html">Trauma (Critical Illness)</a>
+      </div>
+    </div>
     <a href="partners.html">Partners</a>
+    <a href="contact.html">Contact</a>
     <a href="contact.html" class="btn-main">Get a Quote</a>
   </nav>
 </header>
 
 <section class="hero">
   <div class="hero-text">
-    <h1>Critical Illness Insurance</h1>
-    <p>Receive financial support if diagnosed with a serious illness, helping you focus on recovery without financial stress.</p>
+    <h1>Cash when crisis hits.</h1>
+    <p>Trauma Cover pays a tax-free lump sum if you are diagnosed with a major illness like cancer, heart attack, or stroke. No restrictions on how you use the money.</p><br>
+<a href="contact.html" class="btn-main">Get a Quote</a>
   </div>
   <div class="hero-image">Hero Image Placeholder</div>
 </section>
 
-<section class="section">
-  <h2>Benefits of TPD Insurance</h2>
-  <div class="benefits-grid">
-    <div class="benefit-card">
-      <h3>Financial Support</h3>
-      <p>Receive a lump sum to cover living expenses and major financial commitments.</p>
-    </div>
-    <div class="benefit-card">
-      <h3>Peace of Mind</h3>
-      <p>Focus on recovery or adjusting to new circumstances knowing finances are covered.</p>
-    </div>
-    <div class="benefit-card">
-      <h3>Mortgage & Debt Coverage</h3>
-      <p>Help pay off outstanding debts or mortgage if unable to work.</p>
-    </div>
-    <div class="benefit-card">
-      <h3>Flexible Options</h3>
-      <p>Choose a policy and coverage amount that fits your lifestyle and needs.</p>
+<!-- CRITICAL ILLNESS INTRO SECTION -->
+<section style="background:#ffffff; padding:80px 20px; width:100%;">
+
+  <div style="max-width:1000px; margin:0 auto;">
+
+    <h2 style="font-size:32px; color:#146DFF; margin-bottom:20px;">
+      Health insurance pays the hospital. This pays you.
+    </h2>
+
+    <p style="font-size:18px; line-height:1.7; margin-bottom:25px;">
+      If you get hit with a serious diagnosis, Medicare and private health insurance
+      cover the doctors. But who covers the mortgage while you take six months off?
+      Who pays for the experimental treatment, the wheelchair ramp, or the family
+      holiday to de-stress?
+    </p>
+
+    <p style="font-size:18px; line-height:1.7; margin-bottom:35px;">
+      <strong>Trauma Cover</strong> (also called <strong>Critical Illness Insurance</strong>)
+      is your emergency fund on steroids. It gives you a lump-sum cash injection
+      right when you need it most — so you can focus on fighting the illness,
+      not fighting the bank.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- CRITICAL ILLNESS SECTION -->
+<section style="background:#f7f9ff; padding:80px 20px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:#1b1b1b; width:100%;">
+  <div style="max-width:1100px; margin:0 auto;">
+
+    <h2 style="text-align:center; font-size:32px; color:#146DFF; margin-bottom:50px;">
+      What it actually covers
+    </h2>
+
+    <div style="display:flex; flex-wrap:wrap; gap:30px; justify-content:center;">
+
+      <!-- LEFT CARD -->
+      <div style="flex:1; min-width:280px; background:#ffffff; padding:35px; border-radius:14px; box-shadow:0 6px 15px rgba(0,0,0,0.08); transition:0.3s; cursor:pointer;"
+           onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 25px rgba(0,0,0,0.12)';"
+           onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 15px rgba(0,0,0,0.08)';">
+        <p>It covers the <strong>"Big Three"</strong> (which account for about 90% of claims) plus a list of other serious events.</p>
+        <ul style="list-style:none; padding:0; margin:0; line-height:2;">
+          <li>✔ Cancer</li>
+          <li>✔ Heart Attack</li>
+          <li>✔ Stroke</li>
+          <li>✔ Major Head Injury</li>
+          <li>✔ Severe Burns</li>
+        </ul>
+      </div>
+
+      <!-- RIGHT CARD -->
+      <div style="flex:1; min-width:280px; background:#ffffff; padding:35px; border-radius:14px; box-shadow:0 6px 15px rgba(0,0,0,0.08); transition:0.3s; cursor:pointer;"
+           onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 25px rgba(0,0,0,0.12)';"
+           onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 15px rgba(0,0,0,0.08)';">
+        <p><strong>Diagnosis:</strong> You are diagnosed with a specified illness (e.g., breast cancer).</p>
+        <p><strong>The Check:</strong> The insurer pays your full sum insured (e.g., $200k) straight to your bank account.</p>
+        <p><strong>Your Choice:</strong> You use the money for whatever you want. Pay off the mortgage, seek treatment overseas, or just take time off work.</p>
+      </div>
+
     </div>
   </div>
 </section>
 
-<section class="section gray-bg">
-  <div class="section-gray-content">
-    <h2>What Is Critical Illness Insurance?</h2>
 
-    <p>
-      Often called “Trauma Insurance,” Critical Illness Insurance gives you a lump sum if you’re diagnosed with, or suffer from, a serious medical condition like cancer, a heart attack, or stroke—usually with a specified level of severity. Most of Australia’s top insurers cover around 50 conditions.
-    </p>
 
-    <p>
-      These conditions can be life-changing, costly, or both—and sometimes private health insurance or the public system doesn’t cover everything. This could include things like major head injuries, severe burns, coma, or diagnoses such as Multiple Sclerosis, Parkinson’s, Muscular Dystrophy, brain tumours, and more.
-    </p>
+<!-- WHY USE US SECTION - CRITICAL ILLNESS -->
+<section style="background:#ffffff; padding:80px 20px; width:100%;">
+  <div style="max-width:1100px; margin:0 auto; text-align:center;">
 
-    <p>
-      For the full list of conditions covered, our brokers can guide you and help compare options across different insurers, so you can choose the policy that fits your needs.
-    </p>
+    <h2 style="font-size:32px; color:#146DFF; margin-bottom:50px;">Why Use Us?</h2>
+
+    <div style="display:flex; flex-wrap:wrap; gap:30px; justify-content:center;">
+
+      <!-- Card 1 -->
+      <div style="flex:1 1 48%; min-width:300px; background:white; padding:40px; border-radius:14px; box-shadow:0 8px 20px rgba(0,0,0,0.08); transition:0.3s;">
+        <h3 style="color:#000030; margin-bottom:20px;">Insurance Coverage is Tricky</h3>
+        <p style="line-height:1.7; color:#333;">
+          Not all "Cancer" is covered. This is the trickiest part of insurance. One insurer might cover early-stage prostate cancer, while another only covers it if it's life-threatening. The definitions vary wildly.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div style="flex:1 1 48%; min-width:300px; background:white; padding:40px; border-radius:14px; box-shadow:0 8px 20px rgba(0,0,0,0.08); transition:0.3s;">
+        <h3 style="color:#000030; margin-bottom:20px;">We Compare & Protect You</h3>
+        <p style="line-height:1.7; color:#333;">
+          We check the fine print. We compare 9+ insurers to find the policy with the best medical definitions. We ensure you aren't paying for a policy that leaves you high and dry because your illness wasn't "severe enough" in the fine print.
+        </p>
+      </div>
+
+    </div>
+
   </div>
 </section>
 
+<!-- Optional hover effect -->
+<style>
+  section div[style*="box-shadow"]:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+  }
+</style>
 
-<section class="section">
-  <div class="section-white-content">
-    <h2>I’ve Got Private Health—Why Do I Still Need Critical Illness Insurance?</h2>
 
-    <p>Private health insurance is great for covering treatment costs, but Critical Illness Insurance works differently—it gives you a lump sum straight into your nominated bank account, usually tax-free, that you can use however you need. That could mean paying for medical and rehab costs, replacing lost income, giving your family time to support you, or covering other related expenses.</p>
+<!-- TWO TECHNICAL THINGS SECTION - DYNAMIC STYLE -->
+<section class="section gray-bg" style="position:relative; overflow:hidden;">
+  <!-- Optional diagonal background accent -->
+  <div style="position:absolute; top:0; left:-50px; width:200%; height:200px; background:linear-gradient(135deg,#02D9C5,#146DFF,#AD89FF); transform:rotate(-3deg); z-index:0; opacity:0.1;"></div>
 
-    <p>Think of it this way: Private Health Insurance and Critical Illness Insurance work hand-in-hand. One handles the bills, the other gives you flexibility and peace of mind, so you have the funds to get the care and support you need if a serious illness strikes.</p>
+  <div style="position:relative; max-width:1100px; margin:0 auto; text-align:center; z-index:1;">
+    
+    <h2 style="font-size:32px; color:#146DFF; margin-bottom:30px;">Two Technical Things You Should Know</h2>
+    <p style="font-size:18px; line-height:1.7; max-width:800px; margin:0 auto 60px;">
+      Don't worry, we handle this for you, but here is what they mean.
+    </p>
+
+    <div style="display:flex; flex-wrap:wrap; gap:40px; justify-content:center;">
+
+      <!-- Card 1 -->
+      <div style="flex:1 1 45%; min-width:280px; background:white; border-radius:16px; box-shadow:0 12px 28px rgba(0,0,0,0.1); padding:35px; position:relative; transition:0.3s;">
+        <div style="position:absolute; top:-20px; left:-20px; background:#02D9C5; width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; color:white; font-size:28px;">🔄</div>
+        <h3 style="margin-top:30px; color:#000030;">1. The "Buy-Back" Option (Reinstatement)</h3>
+        <p style="line-height:1.7; margin-top:15px;">
+          Usually, once you claim, your policy ends. But with "Reinstatement," you can buy the cover back 12 months later.
+        </p>
+        <p style="line-height:1.7; font-weight:600; margin-top:15px;">Why do it?</p>
+        <p style="line-height:1.7;">
+          If you claim for Cancer today, you can reinstate the policy. If you have a Heart Attack 5 years later, you can claim again. It’s a second safety net.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div style="flex:1 1 45%; min-width:280px; background:white; border-radius:16px; box-shadow:0 12px 28px rgba(0,0,0,0.1); padding:35px; position:relative; transition:0.3s;">
+        <div style="position:absolute; top:-20px; left:-20px; background:#146DFF; width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; color:white; font-size:28px;">🩺</div>
+        <h3 style="margin-top:30px; color:#000030;">2. The Medical "Grill" (Underwriting)</h3>
+        <p style="line-height:1.7; margin-top:15px;">
+          Applying for Trauma cover involves medical questions. Insurers want to know your history to assess the risk.
+        </p>
+        <p style="line-height:1.7; font-weight:600; margin-top:15px;">How we help:</p>
+        <p style="line-height:1.7;">
+          We handle the forms and the awkward questions. If you have a pre-existing condition, we fight to get you the best possible terms without unfair exclusions.
+        </p>
+      </div>
+
+    </div>
   </div>
 </section>
+
+<style>
+  .gray-bg div[style*="box-shadow"] {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .gray-bg div[style*="box-shadow"]:hover {
+    transform: translateY(-10px) rotate(-1deg);
+    box-shadow:0 20px 40px rgba(0,0,0,0.15);
+  }
+</style>
+
+
+<!-- FAQ SECTION -->
+<section style="background:#f7f9ff; padding:80px 20px; width:100%;">
+  <div style="max-width:900px; margin:0 auto;">
+
+    <h2 style="font-size:32px; color:#146DFF; text-align:center; margin-bottom:50px;">
+      Frequently Asked Questions
+    </h2>
+
+    <!-- FAQ Item 1 -->
+    <div class="faq-item">
+      <button class="faq-question">
+        Is the payout tax-free?
+        <span>+</span>
+      </button>
+      <div class="faq-answer">
+        <p>
+          Yes. In almost all cases, a Trauma insurance payout is completely tax-free.
+        </p>
+      </div>
+    </div>
+
+    <!-- FAQ Item 2 -->
+    <div class="faq-item">
+      <button class="faq-question">
+        Can I hold this inside Super?
+        <span>+</span>
+      </button>
+      <div class="faq-answer">
+        <p>
+          Generally, no. Trauma is usually held personally because the laws around releasing money from Super for medical conditions are very strict. We help you structure this so it doesn't break the bank.
+        </p>
+      </div>
+    </div>
+
+    <!-- FAQ Item 3 -->
+    <div class="faq-item">
+      <button class="faq-question">
+        How much cover do I need?
+        <span>+</span>
+      </button>
+      <div class="faq-answer">
+        <p>
+          A good rule of thumb is enough to clear your debts (like the mortgage) plus 1-2 years of income. This lets you reset your life completely debt-free.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .faq-item {
+    background:#ffffff;
+    border-radius:12px;
+    margin-bottom:16px;
+    box-shadow:0 6px 16px rgba(0,0,0,0.08);
+    overflow:hidden;
+    transition:0.3s;
+  }
+
+  .faq-item:hover {
+    transform: translateY(-4px);
+    box-shadow:0 12px 28px rgba(0,0,0,0.12);
+  }
+
+  .faq-question {
+    width:100%;
+    background:none;
+    border:none;
+    padding:22px 26px;
+    font-size:18px;
+    font-weight:600;
+    text-align:left;
+    cursor:pointer;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:#000030;
+    transition:0.3s;
+  }
+
+  .faq-question span {
+    font-size:24px;
+    transition:0.3s;
+  }
+
+  .faq-answer {
+    max-height:0;
+    overflow:hidden;
+    transition:max-height 0.4s ease;
+    padding:0 26px;
+  }
+
+  .faq-answer p {
+    padding-bottom:22px;
+    color:#333;
+    line-height:1.7;
+  }
+
+  .faq-item.active .faq-answer {
+    max-height:200px;
+  }
+
+  .faq-item.active .faq-question span {
+    transform:rotate(45deg);
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+      const item = button.parentElement;
+      item.classList.toggle('active');
+    });
+  });
+</script>
+
+
+<!-- FINAL CTA SECTION: TRAUMA INSURANCE -->
+<section style="background:linear-gradient(135deg,#02D9C5,#146DFF,#AD89FF); padding:80px 20px; width:100%;">
+  <div style="
+    max-width:900px;
+    margin:0 auto;
+    background:#ffffff;
+    padding:60px 40px;
+    border-radius:16px;
+    box-shadow:0 12px 30px rgba(0,0,0,0.12);
+    text-align:center;
+    transition:0.3s;
+  ">
+
+    <h2 style="font-size:36px; color:#000030; margin-bottom:25px; line-height:1.3;">
+      Stop hoping for the best. Prepare for the worst.
+    </h2>
+
+    <p style="font-size:18px; line-height:1.7; color:#333; margin-bottom:40px;">
+      Medical advancements mean you are likely to survive a major illness. We make sure you survive it financially, too.
+    </p>
+
+    <a href="contact.html" class="btn-main" style="
+      font-size:18px;
+      padding:16px 36px;
+      background: linear-gradient(135deg, #02D9C5, #146DFF, #AD89FF);
+      color:white;
+      border-radius:12px;
+      display:inline-block;
+      font-weight:600;
+      text-decoration:none;
+      transition:0.3s;
+    ">Compare Trauma Quotes</a>
+
+  </div>
+</section>
+
+<style>
+  section div[style*="box-shadow"]:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 35px rgba(0,0,0,0.15);
+  }
+
+  .btn-main:hover {
+    background: linear-gradient(135deg, #00C8B8, #0F54FF, #9C63FF);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+  }
+</style>
+
+
+
+
 
 <footer>
-  <div style="max-width:1200px; margin:0 auto; padding:40px 20px; color:#aaa; text-align:center;">
-    <!-- Logo -->
-    <div style="margin-bottom:20px; text-align:center;">
-  <img src="images/insureyou-logo-dark.png" alt="Insureyou Advisory Logo" style="height:80px; max-width:200px;">
-</div>
+  <div class="footer-container">
 
+    <!-- Top: Logo & Brief -->
+    <div class="footer-top">
+      <div class="footer-logo">
+        <img src="images/insureyou-logo-dark.png" alt="Insureyou Advisory Logo">
+      </div>
+      <p class="footer-description">
+        Insureyou Advisory (ABN 21 891 330 783) operates under general advice only. We provide education and options to help you make informed decisions, but cannot give personal advice. All information on this website is for general purposes only.
+      </p>
+    </div>
 
-    <!-- Contact Info -->
-    <p>
-      12/42 King Street, Airport West VIC 3042<br>
-      01 2345 6789 | protect@insureyouadvisory.com.au<br>
-      9am to 5pm AEST
-    </p>
+    <!-- Middle: Links & Contact Info -->
+    <div class="footer-middle">
 
-    <!-- Disclaimer -->
-    <p style="font-size:0.85rem; margin:20px 0;">
-      Insureyou Advisory (ABN XX XXX XXX XXX) operates under Insure Solutions Pty Ltd (AFSL XXXXXXX) and can only give general advice about Personal Insurance. This means we provide information to help you make good decisions but cannot give personal advice or recommendations. Everything on this website is general information only.
-    </p>
-    <p style="font-size:0.85rem; margin-bottom:20px;">
-      Each insurer we partner with has its own terms and conditions. Please review the relevant insurer’s Product Disclosure Statement to see if their products meet your needs.
-    </p>
+      <!-- Links -->
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
+        <a href="fsg.html">Financial Services Guide</a>
+        <a href="pds.html">Product Disclosure Statements</a>
+      </div>
 
-    <!-- Legal Links -->
-    <p>
-      <a href="privacy-policy.html" style="color:#aaa; text-decoration:underline; margin:0 5px;">Privacy Policy</a> |
-      <a href="terms.html" style="color:#aaa; text-decoration:underline; margin:0 5px;">Terms and Conditions</a> |
-      <a href="fsg.html" style="color:#aaa; text-decoration:underline; margin:0 5px;">Financial Services Guide</a> |
-      <a href="pds.html" style="color:#aaa; text-decoration:underline; margin:0 5px;">Product Disclosure Statements</a>
-    </p>
+      <!-- Contact -->
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>12/42 King Street, Airport West VIC 3042 (By appointment only)</p>
+        <p>01 2345 6789 | protect@insureyouadvisory.com.au</p>
+        <p>Mon-Fri 9am to 5pm AEST</p>
+      </div>
 
-<!-- Social Media -->
-<div style="margin:20px 0;">
-<h3>FOLLOW US</h3><br>
-  <a href="https://www.facebook.com/" target="_blank" style="margin:0 10px;">
-    <img src="images/facebook.png" alt="Facebook" style="width:32px; height:32px;">
-  </a>
-  <a href="https://www.instagram.com/" target="_blank" style="margin:0 10px;">
-    <img src="images/instagram.png" alt="Instagram" style="width:32px; height:32px;">
-  </a>
-  <a href="https://www.linkedin.com/" target="_blank" style="margin:0 10px;">
-    <img src="images/linkedin.png" alt="LinkedIn" style="width:32px; height:32px;">
-  </a>
-</div>
+      <!-- Social -->
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
+          <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
+          <a href="https://www.linkedin.com/" target="_blank"><img src="images/linkedin.png" alt="LinkedIn"></a>
+        </div>
+      </div>
 
+    </div>
 
-    <!-- Copyright -->
-    <p style="margin-top:20px;">© 2026 Insureyou Advisory. All rights reserved.</p>
+    <!-- Bottom: Copyright -->
+    <div class="footer-bottom">
+      <p>© 2026 Insureyou Advisory. All rights reserved.</p>
+    </div>
+
   </div>
 </footer>
 
